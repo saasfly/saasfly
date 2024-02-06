@@ -1,0 +1,88 @@
+{
+  "price": {
+    "title": "便宜，透明的价格！",
+    "pricing": "价格",
+    "slogan": "全速启动！",
+    "monthly_bill": "月度账单",
+    "annual_bill": "年度账单",
+    "annual_info": "年度收费时将收取",
+    "monthly_info": "每月收费时",
+    "mo": "/月",
+    "contact": "联系我们的支持团队。",
+    "contact_2": "您可以测试订阅，不会被收费。",
+    "faq": "常见问题",
+    "faq_detail": "浏览我们全面的常见问题，快速找到常见问题的答案。如果您需要进一步的帮助，不要犹豫，联系我们获取个性化的帮助。",
+    "signup": "注册",
+    "upgrade": "升级",
+    "manage_subscription": "管理订阅",
+    "go_to_dashboard": "转到仪表板",
+    "": ""
+  },
+  "marketing": {
+    "title": "SaaS服务供应商。",
+    "sub_title": "为初创公司提供云原生SaaS解决方案。",
+    "get_started": "启 航",
+    "explore_product": "探索产品",
+    "features": "特色",
+    "sub_features": "云原生：为初创公司简化技术、降低成本而生。",
+    "k8s_features": "开发快速、简单",
+    "devops_features": "应用轻松部署",
+    "price_features": "经济高效为生产环境打造。",
+    "main_nav_features": "特色",
+    "main_nav_pricing": "价格",
+    "main_nav_products": "产品",
+    "main_nav_blog": "博客",
+    "main_nav_documentation": "文档",
+    "login": "登录",
+    "signup": "注册",
+    "": ""
+  },
+  "login": {
+    "back": "返回",
+    "welcome_back": "欢迎回来",
+    "signin_title": "输入您的电子邮件以登录您的账户",
+    "singup_title": "还没有账户？立即注册。",
+    "signin_email": "用电子邮件登录",
+    "signin_others": "或者继续使用",
+    "signup": "注册",
+    "privacy": "只有您的电子邮件和头像会被存储。",
+    "signup_github": "使用 Github 注册",
+    "": ""
+  },
+  "common": {
+    "copyright": "版权所有 © ${currentYear} Nextify公司。保留所有权利。",
+    "dashboard": {
+      "main_nav_documentation": "文档",
+      "main_nav_support": "支持",
+      "sidebar_nav_clusters": "集群",
+      "sidebar_nav_billing": "账单",
+      "sidebar_nav_settings": "设置",
+      "title_text": "创建和管理集群。",
+      "": ""
+    }
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "创建新的集群",
+      "no_cluster_title": "没有创建集群",
+      "no_cluster_content": "您还没有任何集群。开始创建集群吧。",
+      "": ""
+    },
+    "billing": {
+      "billing": "账单",
+      "content": "管理您的订阅和账单详情",
+      "noSubscription": "您尚未订阅任何计划。",
+      "subscriptionInfo": "您目前处于 <strong>{plan}</strong> 计划。您的订阅将在 <strong>{date}</strong> 续订。",
+      "manage_subscription": "管理订阅",
+      "upgrade": "升级",
+      "": ""
+    }
+  },
+  "dropdown": {
+    "dashboard": "仪表板",
+    "billing": "计费",
+    "settings": "设置",
+    "sign_out": "登出",
+    "": ""
+  }
+}

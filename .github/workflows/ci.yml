@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ "*" ]
+  push:
+    branches: [ "main" ]
+  merge_group:
+
+# You can leverage Vercel Remote Caching with Turbo to speed up your builds
+# @link https://turborepo.org/docs/core-concepts/remote-caching#remote-caching-on-vercel-builds
+# env:
+#  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+#  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
+jobs:
+  build-lint:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16.1
+        env:
+          POSTGRES_USER: default
+          POSTGRES_PASSWORD: default
+          POSTGRES_DB: verceldb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Copy env
+        shell: bash
+        run: cp .env.example .env.local
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install lib
+        run: bun i
+
+      - name: Build
+        run: bun run build
+        env:
+          # The hostname used to communicate with the PostgreSQL service container
+          POSTGRES_HOST: postgres
+          # The default PostgreSQL port
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: default
+          POSTGRES_PASSWORD: default
+          POSTGRES_DB: verceldb
+          POSTGRES_URL: postgres://default:default@localhost:5432/verceldb
+
+
+      - name: lint and type-check
+        run: bun run build lint format typecheck

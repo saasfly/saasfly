@@ -1,0 +1,61 @@
+.theme-dracula.light {
+  --background: 231, 15%, 100%;
+  --foreground: 60, 30%, 10%;
+
+  --muted: 232, 14%, 98%;
+  --muted-foreground: 60, 30%, 20%;
+
+  --popover: 231, 15%, 94%;
+  --popover-foreground: 60, 30%, 20%;
+
+  --border: 232, 14%, 31%;
+  --input: 225, 27%, 51%;
+
+  --card: 232, 14%, 98%;
+  --card-foreground: 60, 30%, 5%;
+
+  --primary: 265, 89%, 78%;
+  --primary-foreground: 60, 30%, 96%;
+
+  --secondary: 326, 100%, 74%;
+  --secondary-foreground: 60, 30%, 96%;
+
+  --accent: 225, 27%, 70%;
+  --accent-foreground: 60, 30%, 10%;
+
+  --destructive: 0, 100%, 67%;
+  --destructive-foreground: 60, 30%, 96%;
+
+  --ring: 225, 27%, 51%;
+}
+
+.theme-dracula.dark {
+  --background: 231, 15%, 18%;
+  --foreground: 60, 30%, 96%;
+
+  --muted: 232, 14%, 31%;
+  --muted-foreground: 60, 30%, 96%;
+
+  --popover: 231, 15%, 18%;
+  --popover-foreground: 60, 30%, 96%;
+
+  --border: 232, 14%, 31%;
+  --input: 225, 27%, 51%;
+
+  --card: 232, 14%, 31%;
+  --card-foreground: 60, 30%, 96%;
+
+  --primary: 265, 89%, 78%;
+  --primary-foreground: 60, 30%, 96%;
+
+  --secondary: 326, 100%, 74%;
+  --secondary-foreground: 60, 30%, 96%;
+
+  --accent: 225, 27%, 51%;
+  --accent-foreground: 60, 30%, 96%;
+
+  --destructive: 0, 100%, 67%;
+  --destructive-foreground: 60, 30%, 96%;
+
+  --ring: 225, 27%, 51%;
+}

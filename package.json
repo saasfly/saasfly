@@ -1,0 +1,37 @@
+{
+  "name": "nextjs-template",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:push": "cd ./packages/db/ && bun db:push",
+    "dev": "turbo dev --parallel",
+    "dev:web": "turbo dev --parallel --filter !stripe",
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' ",
+    "typecheck": "turbo typecheck",
+    "postinstall": "bun run check-deps",
+    "check-deps": "check-dependency-version-consistency .",
+    "gen": "turbo gen --config 'turbo/generators/config.ts'"
+  },
+  "devDependencies": {
+    "@turbo/gen": "1.13.0",
+    "prettier": "3.2.5",
+    "turbo": "1.13.0",
+    "typescript": "5.4.3",
+    "check-dependency-version-consistency": "4.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": "@saasfly/prettier-config",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "packageManager": "bun@1.0.26"
+}

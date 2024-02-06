@@ -1,0 +1,10 @@
+.next/
+.contentlayer/
+src/components/billing-form.tsx
+src/components/content/mdx-components.tsx
+src/components/docs/pager.tsx
+src/components/k8s/cluster-operation.tsx
+src/components/price/pricing-cards.tsx
+src/components/user-account-nav.tsx
+src/lib/toc.ts
+src/middleware.ts

@@ -1,0 +1,45 @@
+{
+  "name": "@saasfly/db",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts"
+  },
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prisma format && prettier --check '**/*.{ts,json}' ",
+    "db:generate": "prisma generate",
+    "db:push": "bun with-env prisma db push --skip-generate",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "kysely": "0.27.2",
+    "@vercel/postgres-kysely": "0.7.2"
+  },
+  "devDependencies": {
+    "@saasfly/eslint-config": "workspace:*",
+    "@saasfly/prettier-config": "workspace:*",
+    "@saasfly/typescript-config": "workspace:*",
+    "dotenv-cli": "7.3.0",
+    "eslint": "8.56.0",
+    "prettier": "3.2.5",
+    "prisma": "5.9.1",
+    "prisma-kysely": "1.7.1",
+    "@types/pg": "8.11.0",
+    "typescript": "5.4.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@saasfly/eslint-config/base"
+    ],
+    "rules": {
+      "@typescript-eslint/consistent-type-definitions": "off"
+    }
+  },
+  "prettier": "@saasfly/prettier-config"
+}

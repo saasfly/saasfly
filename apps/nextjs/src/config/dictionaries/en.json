@@ -1,0 +1,88 @@
+{
+  "price": {
+    "title": "Cheap, transparent prices!",
+    "pricing": "Pricing",
+    "slogan": "Start at full speed !",
+    "monthly_bill": "Monthly Billing",
+    "annual_bill": "Annual Billing",
+    "annual_info": "will be charged when annual",
+    "monthly_info": "when charged monthly",
+    "mo": "/mo",
+    "contact": "for to contact our support team.",
+    "contact_2": "You can test the subscriptions and won&apos;t be charged.",
+    "faq": "Frequently Asked Questions",
+    "faq_detail": "Explore our comprehensive FAQ to find quick answers to common inquiries. If you need further assistance, don&apos;t hesitate to contact us for personalized help.",
+    "signup": "Sign up",
+    "upgrade": "Upgrade",
+    "manage_subscription": "Manage Subscription",
+    "go_to_dashboard": "Go to dashboard",
+    "": ""
+  },
+  "marketing": {
+    "title": "SaaS service provider.",
+    "sub_title": "Providing cloud-native SaaS solutions for startups.",
+    "get_started": "Get Started",
+    "explore_product": "Explore Product",
+    "features": "Features",
+    "sub_features": "Cloud-native: Simplifying technology and reducing costs for startups.",
+    "k8s_features": "Fast, simple development",
+    "devops_features": "Easy application deployment",
+    "price_features": "Economically efficient for production environments.",
+    "main_nav_features": "Features",
+    "main_nav_pricing": "Pricing",
+    "main_nav_products": "Products",
+    "main_nav_blog": "Blog",
+    "main_nav_documentation": "Documentation",
+    "login": "Login",
+    "signup": "Sign up",
+    "": ""
+  },
+  "login": {
+    "back": "Back",
+    "welcome_back": "Welcome back",
+    "signin_title": "Enter your email to log into your account",
+    "singup_title": "Don't have an account? Sign up now.",
+    "signin_email": "Log in with Email",
+    "signin_others": "Or continue with",
+    "signup": "Sign up",
+    "privacy": "only your email and profile picture will be stored.",
+    "signup_github": "Sign Up with Github",
+    "": ""
+  },
+  "common": {
+    "copyright": "Copyright © ${currentYear} Nextify Limited. All rights reserved.",
+    "dashboard": {
+      "main_nav_documentation": "Documentation",
+      "main_nav_support": "Support",
+      "sidebar_nav_clusters": "Clusters",
+      "sidebar_nav_billing": "Billing",
+      "sidebar_nav_settings": "Settings",
+      "title_text": "Create and manage clusters."
+    },
+    "": ""
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "New Cluster",
+      "no_cluster_title": "No clusters created",
+      "no_cluster_content": "You don&apos;t have any clusters yet. Start creating cluster. ",
+      "": ""
+    },
+    "billing": {
+      "billing": "Billing",
+      "content": "Manage your subscription and billing details",
+      "noSubscription": "You are not subscribed to any plan. ",
+      "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
+      "manage_subscription": "Manage Subscription",
+      "upgrade": "upgrade",
+      "": ""
+    }
+  },
+  "dropdown": {
+    "dashboard": "Dashboard",
+    "billing": "Billing",
+    "settings": "Settings",
+    "sign_out": "Sign out",
+    "": ""
+  }
+}

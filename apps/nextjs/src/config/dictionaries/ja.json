@@ -1,0 +1,88 @@
+{
+  "price": {
+    "title": "安価で透明な価格！",
+    "pricing": "価格設定",
+    "slogan": "全速力でスタート！",
+    "monthly_bill": "月額請求",
+    "annual_bill": "年間請求",
+    "annual_info": "年間請求時に請求されます",
+    "monthly_info": "月額請求時",
+    "mo": "/月",
+    "contact": "サポートチームに連絡するための。",
+    "contact_2": "サブスクリプションをテストしても請求されません。",
+    "faq": "よくある質問",
+    "faq_detail": "包括的なFAQを探索して、一般的な問い合わせに対する迅速な回答を見つけてください。さらなる支援が必要な場合は、遠慮せずにパーソナライズされたヘルプのために私たちに連絡してください。",
+    "signup": "サインアップ",
+    "upgrade": "アップグレード",
+    "manage_subscription": "サブスクリプションの管理",
+    "go_to_dashboard": "ダッシュボードへ",
+    "": ""
+  },
+  "marketing": {
+    "title": "SaaSサービスプロバイダ。",
+    "sub_title": "スタートアップ向けのクラウドネイティブSaaSソリューションを提供。",
+    "get_started": "始める",
+    "explore_product": "製品を探す",
+    "features": "特徴",
+    "sub_features": "クラウドネイティブ：スタートアップのための技術の簡素化とコスト削減。",
+    "k8s_features": "高速でシンプルな開発",
+    "devops_features": "アプリケーションの簡単なデプロイ",
+    "price_features": "生産環境に対する経済的効率性。",
+    "main_nav_features": "特徴",
+    "main_nav_pricing": "価格",
+    "main_nav_products": "製品",
+    "main_nav_blog": "ブログ",
+    "main_nav_documentation": "ドキュメンテーション",
+    "login": "ログイン",
+    "signup": "サインアップ",
+    "": ""
+  },
+  "login": {
+    "back": "戻る",
+    "welcome_back": "おかえりなさい",
+    "signin_title": "アカウントにログインするためのメールを入力してください",
+    "singup_title": "アカウントがまだないですか？今すぐサインアップ。",
+    "signin_email": "メールでログイン",
+    "signin_others": "または続ける",
+    "signup": "サインアップ",
+    "privacy": "メールアドレスとプロフィール画像のみが保存されます。",
+    "signup_github": "Githubでサインアップ",
+    "": ""
+  },
+  "common": {
+    "copyright": "著作権 © ${currentYear} Nextify株式会社。全ての権利を保有。",
+    "dashboard": {
+      "main_nav_documentation": "ドキュメンテーション",
+      "main_nav_support": "サポート",
+      "sidebar_nav_clusters": "クラスター",
+      "sidebar_nav_billing": "請求",
+      "sidebar_nav_settings": "設定",
+      "title_text": "クラスターの作成と管理。",
+      "": ""
+    },
+    "": ""
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "新しいクラスターを作成する",
+      "no_cluster_title": "クラスターが作成されていません",
+      "no_cluster_content": "まだクラスターがありません。クラスターの作成を始めましょう。"
+    },
+    "billing": {
+      "billing": "請求書",
+      "content": "あなたの購読と請求詳細を管理する",
+      "noSubscription": "どのプランにも登録されていません。",
+      "subscriptionInfo": "現在、<strong>{plan}</strong> プランを利用しています。ご登録のサブスクリプションは <strong>{date}</strong> に更新されます。",
+      "manage_subscription": "サブスクリプションの管理",
+      "upgrade": "アップグレード"
+    },
+    "": ""
+  },
+  "dropdown": {
+    "dashboard": "ダッシュボード",
+    "billing": "請求",
+    "settings": "設定",
+    "sign_out": "サインアウト",
+    "": ""
+  }
+}

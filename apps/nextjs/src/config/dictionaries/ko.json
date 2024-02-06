@@ -1,0 +1,89 @@
+{
+  "price": {
+    "title": "저렴하고 투명한 가격!",
+    "pricing": "가격 책정",
+    "slogan": "전속력으로 시작하세요!",
+    "monthly_bill": "월간 청구",
+    "annual_bill": "연간 청구",
+    "annual_info": "연간 청구시 청구됩니다",
+    "monthly_info": "월간 청구시",
+    "mo": "/월",
+    "contact": "지원 팀에 연락하려면.",
+    "contact_2": "구독을 테스트하고 청구되지 않습니다.",
+    "faq": "자주 묻는 질문",
+    "faq_detail": "우리의 포괄적인 FAQ를 탐색하여 일반적인 문의에 대한 빠른 답변을 찾아보세요. 추가 지원이 필요하시면 망설이지 말고 개인화된 도움을 위해 저희에게 연락하십시오.",
+    "signup": "가입하기",
+    "upgrade": "업그레이드",
+    "manage_subscription": "구독 관리",
+    "go_to_dashboard": "대시보드로 이동",
+    "": ""
+  },
+  "marketing": {
+    "title": "SaaS 서비스 제공자.",
+    "sub_title": "스타트업을 위한 클라우드 네이티브 SaaS 솔루션 제공.",
+    "get_started": "시작하기",
+    "explore_product": "제품 탐색",
+    "features": "특징",
+    "sub_features": "클라우드 네이티브: 스타트업을 위한 기술 단순화 및 비용 절감.",
+    "k8s_features": "빠르고 간단한 개발",
+    "devops_features": "간편한 애플리케이션 배포",
+    "price_features": "생산 환경을 위한 경제적 효율성.",
+    "main_nav_features": "특징",
+    "main_nav_pricing": "가격",
+    "main_nav_products": "제품",
+    "main_nav_documentation": "문서",
+    "main_nav_blog": "블로그",
+    "login": "로그인",
+    "signup": "가입하기",
+    "": ""
+  },
+  "login": {
+    "back": "뒤로",
+    "welcome_back": "다시 오신 것을 환영합니다",
+    "signin_title": "계정에 로그인하려면 이메일을 입력하세요",
+    "singup_title": "계정이 없으신가요? 지금 가입하세요.",
+    "signin_email": "이메일로 로그인",
+    "signin_others": "또는 다음으로 계속",
+    "signup": "가입하기",
+    "privacy": "이메일과 프로필 사진만 저장됩니다.",
+    "signup_github": "Github으로 가입하기",
+    "": ""
+  },
+  "common": {
+    "copyright": "저작권 © ${currentYear} Nextify 주식회사. 모든 권리 보유.",
+    "dashboard": {
+      "main_nav_documentation": "문서",
+      "main_nav_support": "지원",
+      "sidebar_nav_clusters": "클러스터",
+      "sidebar_nav_billing": "청구",
+      "sidebar_nav_settings": "설정",
+      "title_text": "클러스터 생성 및 관리。",
+      "": ""
+    },
+    "": ""
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "새 클러스터 생성",
+      "no_cluster_title": "클러스터가 생성되지 않았습니다",
+      "no_cluster_content": "아직 클러스터가 없습니다. 클러스터 생성을 시작하세요."
+    },
+    "billing": {
+      "billing": "청구",
+      "content": "구독 및 청구 세부 정보 관리",
+      "noSubscription": "어떠한 플랜에도 가입하지 않았습니다。",
+      "subscriptionInfo": "현재 <strong>{plan}</strong> 플랜을 사용 중입니다。구독은 <strong>{date}</strong>에 갱신됩니다。",
+      "manage_subscription": "구독 관리",
+      "upgrade": "업그레이드",
+      "": ""
+    },
+    "": ""
+  },
+  "dropdown": {
+    "dashboard": "대시보드",
+    "billing": "청구",
+    "settings": "설정",
+    "sign_out": "로그아웃",
+    "": ""
+  }
+}

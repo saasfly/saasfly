@@ -1,0 +1,36 @@
+{
+    "name":"@saasfly/{{name}}",
+    "private":true,
+    "version":"0.1.0",
+    "exports":{
+        ".":"./index.ts"
+    },
+    "typesVersions":{
+        "*":{
+            "*":[
+                "src/*"
+            ]
+        }
+    },
+    "scripts":{
+        "clean":"rm -rf .turbo node_modules",
+        "lint":"eslint .",
+        "format":"prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "typecheck":"tsc --noEmit"
+    },
+    "dependencies":{
+    },
+    "devDependencies":{
+        "@saasfly/eslint-config":"workspace:*",
+        "@saasfly/prettier-config":"workspace:*",
+        "@saasfly/typescript-config":"workspace:*",
+        "eslint":"8.56.0",
+        "typescript":"5.4.3"
+    },
+    "eslintConfig":{
+        "extends":[
+            "@saasfly/eslint-config/base"
+        ]
+    },
+    "prettier":"@saasfly/prettier-config"
+}

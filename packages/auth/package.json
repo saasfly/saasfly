@@ -1,0 +1,38 @@
+{
+  "name": "@saasfly/auth",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check '**/*.{mjs,ts,json}' ",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@saasfly/db": "workspace:*",
+    "@t3-oss/env-nextjs": "0.8.0",
+    "next": "14.0.3",
+    "next-auth": "4.24.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "3.22.4",
+    "@auth/kysely-adapter": "0.4.2"
+  },
+  "devDependencies": {
+    "@saasfly/eslint-config": "workspace:*",
+    "@saasfly/prettier-config": "workspace:*",
+    "@saasfly/typescript-config": "workspace:*",
+    "eslint": "8.56.0",
+    "prettier": "3.2.5",
+    "typescript": "5.4.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@saasfly/eslint-config/base"
+    ]
+  },
+  "prettier": "@saasfly/prettier-config"
+}

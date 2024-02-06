@@ -1,0 +1,8 @@
+{
+  "extends": "@saasfly/typescript-config/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+  },
+  "include": ["*.ts", "prisma", "src"],
+  "exclude": ["node_modules"]
+}
