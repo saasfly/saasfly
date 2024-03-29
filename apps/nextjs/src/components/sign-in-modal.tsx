@@ -39,7 +39,6 @@ export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
                 )
                 .catch((error) => {
                   console.error("signUp failed:", error);
-                  // 处理错误情况
                 });
             }}
           >
