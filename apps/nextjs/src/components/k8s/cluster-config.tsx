@@ -139,7 +139,7 @@ export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
                   name="location"
                   render={() => (
                     <FormItem>
-                      <FormLabel>Country</FormLabel>
+                      <FormLabel>Region</FormLabel>
                       <FormControl>
                         <Controller
                           control={form.control}
@@ -156,7 +156,7 @@ export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
                               </SelectTrigger>
                               <SelectContent>
                                 <SelectGroup>
-                                  <SelectLabel>Select Country</SelectLabel>
+                                  <SelectLabel>Select Region</SelectLabel>
                                   <SelectItem value="China">China</SelectItem>
                                   <SelectItem value="Hong Kong">
                                     Hong Kong
