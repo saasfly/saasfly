@@ -7,3 +7,5 @@ src/sheet.tsx
 src/toast.tsx
 src/utils/
 src/table.tsx
+src/sparkles.tsx
+src/globe.tsx

@@ -51,7 +51,14 @@
     "cmdk": "0.2.1",
     "lucide-react": "0.323.0",
     "tailwind-merge": "1.14.0",
-    "zod": "3.22.4"
+    "zod": "3.22.4",
+    "@tsparticles/react" : "3.0.0",
+    "@tsparticles/engine": "3.3.0",
+    "@tsparticles/slim":  "3.3.0",
+    "@react-three/fiber": "8.16.1",
+    "@react-three/drei": "9.103.0",
+    "three": "0.163.0",
+    "three-globe": "2.31.0"
   },
   "devDependencies": {
     "@saasfly/eslint-config": "workspace:*",
@@ -108,6 +115,15 @@
     "./callout": "./src/callout.tsx",
     "./card-skeleton": "./src/card-skeleton.tsx",
     "./switch": "./src/switch.tsx",
-    "./accordion": "./src/accordion.tsx"
+    "./accordion": "./src/accordion.tsx",
+    "./3d-card": "./src/3d-card.tsx",
+    "./animated-tooltip": "./src/animated-tooltip.tsx",
+    "./text-generate-effect": "./src/text-generate-effect.tsx",
+    "./typewriter-effect": "./src/typewriter-effect.tsx",
+    "./meteors": "./src/meteors.tsx",
+    "./infinite-moving-cards": "./src/infinite-moving-cards.tsx",
+    "./card-hover-effect": "./src/card-hover-effect.tsx",
+    "./sparkles": "./src/sparkles.tsx",
+    "./globe": "./src/globe.tsx"
   }
 }

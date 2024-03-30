@@ -14,21 +14,22 @@ import { db } from "./db";
 import { env } from "./env.mjs";
 
 type UserId = string;
+type IsAdmin = boolean;
 
 declare module "next-auth" {
   interface Session {
     user: User & {
       id: UserId;
+      isAdmin: IsAdmin;
     };
   }
 }
 
-// interface UserScheme {
-//   emailVerified: boolean;
-//   name: string;
-//   // 可以根据需要添加其他字段，例如：
-//   // email: string;
-// }
+declare module "next-auth" {
+  interface JWT {
+    isAdmin: IsAdmin;
+  }
+}
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -88,6 +89,7 @@ export const authOptions: NextAuthOptions = {
           session.user.name = token.name;
           session.user.email = token.email;
           session.user.image = token.picture;
+          session.user.isAdmin = token.isAdmin as boolean;
         }
       }
       return session;
@@ -99,22 +101,29 @@ export const authOptions: NextAuthOptions = {
         .where("email", "=", email)
         .selectAll()
         .executeTakeFirst();
-      // console.log("jwt dbUser", dbUser)
       if (!dbUser) {
         if (user) {
           token.id = user?.id;
         }
         return token;
       }
+      let isAdmin = false;
+      if (env.ADMIN_EMAIL) {
+        const adminEmails = env.ADMIN_EMAIL.split(",");
+        if (email) {
+          isAdmin = adminEmails.includes(email);
+        }
+      }
       return {
         id: dbUser.id,
         name: dbUser.name,
         email: dbUser.email,
         picture: dbUser.image,
+        isAdmin: isAdmin,
       };
     },
   },
-  // debug: true,
+  debug: true,
 };
 
 // Use it in server contexts

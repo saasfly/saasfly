@@ -24,6 +24,9 @@ const config = {
     mdxRs: true,
     // serverActions: true,
   },
+  images: {
+    domains: ["images.unsplash.com", "avatars.githubusercontent.com"],
+  },
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
