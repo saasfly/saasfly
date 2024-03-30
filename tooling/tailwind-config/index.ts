@@ -66,19 +66,19 @@ export default {
           to: { height: "0" },
         },
         spin: {
-            "0%": {
-              rotate: "0deg",
-            },
-            "15%, 35%": {
-              rotate: "90deg",
-            },
-            "65%, 85%": {
-              rotate: "270deg",
-            },
-            "100%": {
-              rotate: "360deg",
-            },
+          "0%": {
+            rotate: "0deg",
           },
+          "15%, 35%": {
+            rotate: "90deg",
+          },
+          "65%, 85%": {
+            rotate: "270deg",
+          },
+          "100%": {
+            rotate: "360deg",
+          },
+        },
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
@@ -109,18 +109,18 @@ export default {
         slide: "slide var(--speed) ease-in-out infinite alternate",
         marquee: "marquee var(--duration) linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
-        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),addVariablesForColors],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
-
 
 function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({

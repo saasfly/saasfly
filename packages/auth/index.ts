@@ -31,7 +31,6 @@ declare module "next-auth" {
   }
 }
 
-
 export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
