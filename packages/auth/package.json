@@ -13,7 +13,7 @@
   "dependencies": {
     "@saasfly/db": "workspace:*",
     "@t3-oss/env-nextjs": "0.8.0",
-    "next": "14.0.3",
+    "next": "14.0.1",
     "next-auth": "4.24.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
