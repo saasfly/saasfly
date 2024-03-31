@@ -13,6 +13,7 @@ You don't need to buy templates anymore; Saasfly provides a complete, open-sourc
 
 > **[Nextify](https://nextify.ltd)** provides a complete Enterprise SaaS solution. Contact us at [contact@nextify.ltd](mailto:contact@nextify.ltd) if you're interested in discussing your project, or if you'd simply like to have a conversation with us, please feel free to reach out.
 
+
 ## ⚡ Live Demo
 
 Try it out for yourself!
@@ -22,6 +23,10 @@ Demo Server1 (Location: Washington - USA): <https://show.saasfly.io>
 Demo Server2 (Location: Japan - Tokyo): <https://demo.saasfly.io>
 
 See more documentation at <https://document.saasfly.io>
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=saasfly/saasfly&type=Timeline)](https://star-history.com/#saasfly/saasfly&Timeline)
 
 ## 🚀 Getting Started
 
@@ -89,6 +94,15 @@ bun run dev:web
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 🥺 Project Roadmap
+
+1. Admin Dashboard Page (in alpha !!!)
+   2. only provide static page now and we plan to integrate with headless arch
+   3. You can provide your admin account and change **ADMIN_EMAIL="admin@saasfly.io,root@saasfly.io"** in .env.local and access host:port/admin/dashboard
+   4. Based on security concerns, we will not provide online demos for the time being.
+2. Multi-language readme
+3. TODO
 
 ## ⭐ Features
 
