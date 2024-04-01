@@ -5,7 +5,7 @@
 
 # Saasfly </br>
 
-[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-saasfly-badge]][made-by-saasfly-badge-link]
+[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
 
@@ -191,9 +191,9 @@ This project was inspired by shadcn's [Taxonomy](https://github.com/shadcn-ui/ta
 [check-workflow-badge]: https://img.shields.io/github/actions/workflow/status/saasfly/saasfly/ci.yml?label=ci
 [github-license-badge]: https://img.shields.io/badge/License-MIT-green.svg
 [discord-badge]: https://img.shields.io/discord/1204690198382911488?color=7b8dcd&link=https%3A%2F%2Fsaasfly.io%2Fdiscord
-[made-by-saasfly-badge]: https://img.shields.io/badge/made_by-saasfly-blue?color=FF782B&link=https://saasfly.io/
+[made-by-nextify-badge]: https://img.shields.io/badge/made_by-nextify-blue?color=FF782B&link=https://nextify.ltd/
 
 [check-workflow-badge-link]: https://github.com/saasfly/saasfly/actions/workflows/check.yml
 [github-license-badge-link]: https://github.com/saasfly/saasfly/blob/main/LICENSE
 [discord-badge-link]: https://discord.com/invite/b9uTZjdkrb
-[made-by-saasfly-badge-link]: https://saasfly.io
+[made-by-nextify-badge-link]: https://nextify.ltd
