@@ -3,7 +3,7 @@
     <img src="./saasfly-logo.svg" width="128" alt="" />
 </div>
 
-# Saasfly </br>  
+# Saasfly </br>
 
 [![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-saasfly-badge]][made-by-saasfly-badge-link]
 
@@ -29,6 +29,9 @@ See more documentation at <https://document.saasfly.io>
 [![Star History Chart](https://api.star-history.com/svg?repos=saasfly/saasfly&type=Timeline)](https://star-history.com/#saasfly/saasfly&Timeline)
 
 ## 🚀 Getting Started
+
+###  One Click Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly&env=NEXT_PUBLIC_APP_URL,NEXTAUTH_URL,NEXTAUTH_SECRET,STRIPE_API_KEY,STRIPE_WEBHOOK_SECRET,POSTGRES_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET&install-command=bun%20install&build-command=bun%20run%20build)
 
 ### 📋 Prerequisites
 
@@ -135,7 +138,7 @@ bun run dev:web
 ### 🐲 Global State Management
 
 - **[Zustand](https://zustand.surge.sh/)** – Small, fast and scalable state management for React
-  
+
 ### 🐒 UI
 
 - **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework for rapid UI development

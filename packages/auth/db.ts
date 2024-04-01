@@ -37,14 +37,3 @@ interface Database {
 }
 
 export const db = createKysely<Database>();
-//
-// export const db = new KyselyAuth<Database, Codegen>({
-//     dialect: new PostgresDialect({
-//         pool: new Pool({
-//             host: process.env.POSTGRES_HOST,
-//             database: process.env.POSTGRES_DATABASE,
-//             user: process.env.POSTGRES_USER,
-//             password: process.env.POSTGRES_PASSWORD,
-//         }),
-//     }),
-// })
