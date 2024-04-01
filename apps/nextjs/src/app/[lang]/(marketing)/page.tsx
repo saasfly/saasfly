@@ -16,19 +16,22 @@ const meteors_data: Meteor[] = [
   {
     name: "Saasfly Github",
     description: "What are you waiting for? Just kickoff your next App",
-    button_content: "Get Started",
+    button_content: "Star Us",
+    url: "https://github.com/saasfly/saasfly"
   },
   {
     name: "Saasfly Docs",
     description:
       "Your complete All-in-One solution for building SaaS services.",
     button_content: "Explore",
+    url: "https://document.saasfly.io"
   },
   {
     name: "Discord",
     description:
       "Join our Discord server to chat with other developers and get help.",
     button_content: "Chat with us",
+    url: "https://discord.com/invite/b9uTZjdkrb"
   },
 ];
 
