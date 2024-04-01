@@ -5,7 +5,7 @@
 
 # Saasfly </br>
 
-[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
+[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link] [![chinese](https://img.shields.io/badge/-Chinese-blue.svg)](README_zh.md)
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
 
@@ -110,14 +110,14 @@ bun run dev:web
    2. only provide static page now and we plan to integrate with headless arch
    3. You can provide your admin account and change **ADMIN_EMAIL="admin@saasfly.io,root@saasfly.io"** in .env.local and access host:port/admin/dashboard
    4. Based on security concerns, we will not provide online demos for the time being.
-2. Multi-language readme
+2. Multi-language READEME
 3. TODO
 
 ## ⭐ Features
 
 ### 🐭 Frameworks
 
-- **[Next.js](https://nextjs.org/)** - Fast by default, with config optimized for performance (with **App Directory**)
+- **[Next.js](https://nextjs.org/)** - The React Framework for the Web (with **App Directory**)
 - **[NextAuth.js](https://next-auth.js.org/)** - Authentication for Next.js
 - **[Kysely](https://kysely.dev/)** - The type-safe SQL query builder for TypeScript
 - **[Prisma](https://www.prisma.io/)** - Next-generation ORM for Node.js and TypeScript, used as a schema management tool
@@ -163,7 +163,6 @@ bun run dev:web
 ### 🐑 Performance
 
 - **[Vercel Analytics](https://vercel.com/analytics)** – Real-time performance metrics for your Next.js app
-- **[million.js](https://million.dev/)** – Make React 70% faster (in future)
 - **[bun.sh](https://bun.sh/)** – npm alternative for faster and more reliable package management
 
 ### 🐘 Database
