@@ -18,9 +18,9 @@
     "gen": "turbo gen --config 'turbo/generators/config.ts'"
   },
   "devDependencies": {
-    "@turbo/gen": "1.13.0",
+    "@turbo/gen": "1.13.1",
     "prettier": "3.2.5",
-    "turbo": "1.13.0",
+    "turbo": "1.13.1",
     "typescript": "5.4.3",
     "check-dependency-version-consistency": "4.1.0"
   },
@@ -33,5 +33,5 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@1.0.26"
+  "packageManager": "bun@1.1.0"
 }

@@ -11,8 +11,6 @@ An easy-to-use and enterprise-grade Next.js boilerplate.
 
 You don't need to buy templates anymore; Saasfly provides a complete, open-source solution for building SaaS applications quickly and easily.
 
-Here is the formatted text with emphasis on the non-profit support:
-
 > **[Nextify](https://nextify.ltd)** provides a complete Enterprise SaaS solution. Contact us at [contact@nextify.ltd](mailto:contact@nextify.ltd) if you're interested in discussing your project, or if you'd simply like to have a conversation with us, please feel free to reach out.
 
 > ❤️ We provide **free technical support and deployment services to non-profit organizations**.
