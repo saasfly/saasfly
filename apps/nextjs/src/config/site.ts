@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "saasfly",
+  name: "Saasfly",
   description: "We provide an easier way to build saas service in production",
   url: "https://github.com/saasfly/saasfly",
   ogImage: "",
