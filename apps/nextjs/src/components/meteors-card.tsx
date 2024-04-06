@@ -1,6 +1,6 @@
 import { Meteors } from "@saasfly/ui/meteors";
 
-import { Meteor } from "~/types/meteors";
+import type { Meteor } from "~/types/meteors";
 
 export function Meteorss({ meteor }: { meteor: Meteor }) {
   return (

@@ -6,7 +6,8 @@ Hier ist die überarbeitete Version der deutschen Übersetzung mit optimierter G
 
 # Saasfly </br>
 
-[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link] [![chinese](https://img.shields.io/badge/-Chinese-blue.svg)](README_zh.md)
+[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
+[![English](https://img.shields.io/badge/-English-grey.svg)](README.md)
 
 Eine einfach zu verwendende und unternehmenstaugliche Next.js-Vorlage.
 

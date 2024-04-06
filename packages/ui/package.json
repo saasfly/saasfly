@@ -68,7 +68,7 @@
     "@types/react": "18.2.30",
     "@tanstack/react-table": "8.11.8",
     "date-fns": "3.3.1",
-    "eslint": "8.56.0",
+    "eslint": "8.57.0",
     "prettier": "3.2.5",
     "react": "18.2.0",
     "react-day-picker": "8.10.0",
@@ -76,7 +76,7 @@
     "react-hook-form": "7.50.1",
     "tailwindcss": "3.4.1",
     "tailwindcss-animate": "1.0.7",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "prettier": "@saasfly/prettier-config",
   "eslintConfig": {

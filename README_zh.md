@@ -4,7 +4,9 @@
 
 # Saasfly </br>
 
-[![GitHub Actions工作流状态][check-workflow-badge]][check-workflow-badge-link] [![GitHub许可证][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link] [![chinese](https://img.shields.io/badge/-Chinese-blue.svg)](README_zh.md)
+[![GitHub Actions工作流状态][check-workflow-badge]][check-workflow-badge-link] [![GitHub许可证][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
+[![English](https://img.shields.io/badge/-English-grey.svg)](README.md)
+
 
 一个易于使用、企业级的Next.js样板。
 

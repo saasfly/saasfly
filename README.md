@@ -5,7 +5,10 @@
 
 # Saasfly </br>
 
-[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link] [![chinese](https://img.shields.io/badge/-Chinese-blue.svg)](README_zh.md)
+[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
+[![Chinese](https://img.shields.io/badge/-Chinese-red.svg)](README_zh.md)
+[![German](https://img.shields.io/badge/-German-yellow.svg)](README_de.md)
+[![Vietnamese](https://img.shields.io/badge/-Vietnamese-yellow.svg)](README_vi.md)
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
 
