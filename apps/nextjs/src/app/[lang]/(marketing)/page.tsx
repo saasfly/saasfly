@@ -10,7 +10,7 @@ import TextGenerateEffects from "~/components/textGenerateEffect";
 import { TypewriterEffectSmooths } from "~/components/typewriterEffectSmooth";
 import type { Locale } from "~/config/i18n-config";
 import { getDictionary } from "~/lib/get-dictionary";
-import { Meteor } from "~/types/meteors";
+import type { Meteor } from "~/types/meteors";
 
 const meteors_data: Meteor[] = [
   {
