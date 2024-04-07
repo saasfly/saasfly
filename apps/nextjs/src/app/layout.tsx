@@ -49,10 +49,10 @@ export const metadata = {
   ],
   authors: [
     {
-      name: "nok8s",
+      name: "saasfly",
     },
   ],
-  creator: "nok8s",
+  creator: "Saasfly",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -66,7 +66,7 @@ export const metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  metadataBase: new URL("https://frontend.nok8s.io/"),
+  metadataBase: new URL("https://show.saasfly.io/"),
   // manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
