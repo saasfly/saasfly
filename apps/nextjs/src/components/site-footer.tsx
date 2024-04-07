@@ -10,7 +10,6 @@ function getCopyrightText(
 ) {
   const currentYear = new Date().getFullYear();
   const copyrightTemplate = String(dict.copyright); // 从字典中获取版权信息模板
-  // 替换占位符 ${currentYear} 为实际的年份
   return copyrightTemplate?.replace("${currentYear}", String(currentYear));
 }
 
