@@ -9,7 +9,7 @@ function getCopyrightText(
   dict: Record<string, string | Record<string, string>>,
 ) {
   const currentYear = new Date().getFullYear();
-  const copyrightTemplate = String(dict.copyright); // 从字典中获取版权信息模板
+  const copyrightTemplate = String(dict.copyright);
   return copyrightTemplate?.replace("${currentYear}", String(currentYear));
 }
 
