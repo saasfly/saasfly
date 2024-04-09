@@ -103,7 +103,7 @@ bun db:push
 bun run dev:web
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## 🥺 Project Roadmap
 
