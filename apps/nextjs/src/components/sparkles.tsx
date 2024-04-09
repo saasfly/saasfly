@@ -12,7 +12,7 @@ export function Sparkless() {
     color = "#000000";
   }
   return (
-    <div className="flex flex-col items-center justify-center overflow-hidden rounded-md bg-white dark:bg-black">
+    <div className="flex flex-col items-center justify-center overflow-hidden rounded-md bg-white dark:bg-gray-950">
       <h1 className="relative z-20 text-center font-bold text-black dark:text-white">
         Saasfly: A new SaaS player?
       </h1>
@@ -34,7 +34,7 @@ export function Sparkless() {
         />
 
         {/* Radial Gradient to prevent sharp edges */}
-        <div className="absolute inset-0 h-full w-full bg-white [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)] dark:bg-black"></div>
+        <div className="absolute inset-0 h-full w-full bg-white [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)] dark:bg-gray-950"></div>
       </div>
     </div>
   );

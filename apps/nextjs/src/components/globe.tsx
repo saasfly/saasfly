@@ -396,7 +396,7 @@ export function Globes() {
   ];
 
   return (
-    <div className="relative flex h-screen w-full flex-row items-center justify-center bg-white py-20 dark:bg-black md:h-auto">
+    <div className="relative flex h-screen w-full flex-row items-center justify-center bg-slate-50 py-20 dark:bg-gray-950 md:h-auto">
       <div className="relative mx-auto h-full w-full max-w-7xl overflow-hidden px-4 md:h-[40rem]">
         <motion.div
           initial={{
@@ -420,7 +420,7 @@ export function Globes() {
             for the next generation of businesses.
           </p>
         </motion.div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full select-none bg-gradient-to-b from-transparent to-white dark:to-black" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full select-none bg-gradient-to-b from-transparent to-slate-50 dark:to-gray-950" />
         <div className="absolute -bottom-20 z-10 h-72 w-full md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>

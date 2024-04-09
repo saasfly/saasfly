@@ -6,7 +6,7 @@ import { InfiniteMovingCards } from "@saasfly/ui/infinite-moving-cards";
 
 export function InfiniteMovingCardss() {
   return (
-    <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black">
+    <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-slate-50 antialiased dark:bg-black">
       <InfiniteMovingCards items={reviews} direction="right" speed="slow" />
     </div>
   );
