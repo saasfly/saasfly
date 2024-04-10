@@ -186,6 +186,14 @@ This project is licensed under the MIT License. For more information, see the [L
 
 This project was inspired by shadcn's [Taxonomy](https://github.com/shadcn-ui/taxonomy) and t3-oss's [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo).
 
+## 👨‍💻 Contributors
+
+<a href="https://github.com/saasfly/saasfly/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=saasfly/saasfly" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 <!-- Badges and links -->
 
 [check-workflow-badge]: https://img.shields.io/github/actions/workflow/status/saasfly/saasfly/ci.yml?label=ci
