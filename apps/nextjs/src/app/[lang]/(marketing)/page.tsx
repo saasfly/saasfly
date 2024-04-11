@@ -109,7 +109,7 @@ export default async function IndexPage({
         id="Globes"
         className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"
       >
-        <Globes />
+        {/*<Globes />*/}
       </section>
     </>
   );
