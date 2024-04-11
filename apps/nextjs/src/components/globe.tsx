@@ -422,7 +422,7 @@ export function Globes() {
         </motion.div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full select-none bg-gradient-to-b from-transparent to-slate-50 dark:to-gray-950" />
         <div className="absolute -bottom-20 z-10 h-72 w-full md:h-full">
-          {/*<World data={sampleArcs} globeConfig={globeConfig} />;*/}
+          <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
       </div>
     </div>
