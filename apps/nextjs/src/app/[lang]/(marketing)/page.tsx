@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { HoverEffects } from "~/components/card-hover-effect";
-import { Globes } from "~/components/globe";
+// import { Globes } from "~/components/globe";
 import { InfiniteMovingCardss } from "~/components/infiniteMovingCards";
 import { Meteorss } from "~/components/meteors-card";
 import ShimmerButton from "~/components/shimmer-button";
