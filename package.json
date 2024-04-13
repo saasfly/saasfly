@@ -21,7 +21,7 @@
     "@turbo/gen": "1.13.2",
     "prettier": "3.2.5",
     "turbo": "1.13.2",
-    "typescript": "5.4.4",
+    "typescript": "5.4.5",
     "check-dependency-version-consistency": "4.1.0"
   },
   "engines": {
@@ -33,5 +33,5 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@1.1.2"
+  "packageManager": "bun@1.1.3"
 }
