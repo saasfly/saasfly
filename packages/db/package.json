@@ -14,7 +14,7 @@
     "db:generate": "prisma generate",
     "db:push": "bun with-env prisma db push --skip-generate",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "with-env": "dotenv -e ../../.env.local --"
   },
   "dependencies": {
     "kysely": "0.27.2",
