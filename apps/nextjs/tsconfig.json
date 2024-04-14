@@ -2,8 +2,11 @@
   "extends": "@saasfly/typescript-config/base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "moduleResolution": "bundler",
     "paths": {
       "~/*": ["./src/*"],
+      "@/*": ["./src/*"],
+      "@payload-config": ["./payload.config.ts"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
