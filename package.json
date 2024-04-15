@@ -15,14 +15,17 @@
     "typecheck": "turbo typecheck",
     "postinstall": "bun run check-deps",
     "check-deps": "check-dependency-version-consistency .",
-    "gen": "turbo gen --config 'turbo/generators/config.ts'"
+    "gen": "turbo gen --config 'turbo/generators/config.ts'",
+    "compile-tw-config": "bun run --transpile-only apps/nextjs/tailwind.config.ts > apps/nextjs/tailwind.config.js",
+    "tailwind-config-viewer": "bun run compile-tw-config && tailwind-config-viewer -c apps/nextjs/tailwind.config.js -o -p 3333"
   },
   "devDependencies": {
     "@turbo/gen": "1.13.2",
+    "check-dependency-version-consistency": "4.1.0",
     "prettier": "3.2.5",
+    "tailwind-config-viewer": "^2.0.1",
     "turbo": "1.13.2",
-    "typescript": "5.4.4",
-    "check-dependency-version-consistency": "4.1.0"
+    "typescript": "5.4.4"
   },
   "engines": {
     "node": ">=18"
@@ -33,5 +36,5 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@1.1.2"
+  "packageManager": "bun@1.1.3"
 }
