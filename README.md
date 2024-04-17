@@ -9,6 +9,7 @@
 [![Chinese](https://img.shields.io/badge/-Chinese-red.svg)](README_zh.md)
 [![German](https://img.shields.io/badge/-German-yellow.svg)](README_de.md)
 [![Vietnamese](https://img.shields.io/badge/-Vietnamese-yellow.svg)](README_vi.md) </br>
+![COMMIT_ACTIVITY](https://img.shields.io/github/commit-activity/m/saasfly/saasfly?style=for-the-badge">)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly&labelColor=%23f47373&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly)
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
@@ -105,6 +106,9 @@ bun run dev:web
 ```
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+4. (Optional)`bun run tailwind-config-viewer` Open [http://localhost:3333](http://localhost:3333) in your browser to see your Tailwind CSS configuration
+
 
 ## 🥺 Project Roadmap
 
