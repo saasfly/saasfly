@@ -107,7 +107,7 @@ bun run dev:web
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-4. (Optional)`bun run tailwind-config-viewer` Open [http://localhost:3333](http://localhost:3333) in your browser to see your Tailwind CSS configuration
+4. (Optional alpha)`bun run tailwind-config-viewer` Open [http://localhost:3333](http://localhost:3333) in your browser to see your Tailwind CSS configuration
 
 
 ## 🥺 Project Roadmap

@@ -16,8 +16,8 @@
     "postinstall": "bun run check-deps",
     "check-deps": "check-dependency-version-consistency .",
     "gen": "turbo gen --config 'turbo/generators/config.ts'",
-    "compile-tw-config": "bun run --transpile-only apps/nextjs/tailwind.config.ts > apps/nextjs/tailwind.config.js",
-    "tailwind-config-viewer": "bun run compile-tw-config && tailwind-config-viewer -c apps/nextjs/tailwind.config.js -o -p 3333"
+    "compile-tw-config": "tsc --noEmitOnError tooling/tailwind-config/index.ts --outDir  ./",
+    "tailwind-config-viewer": " tailwind-config-viewer -c ./index.js -o -p 3333"
   },
   "devDependencies": {
     "@turbo/gen": "1.13.2",
