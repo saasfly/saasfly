@@ -11,11 +11,11 @@ import type { MainNavItem } from "~/types";
 interface MobileNavProps {
   items: MainNavItem[];
   children?: React.ReactNode;
+  menuItemClick?: () => void;
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, children, menuItemClick}: MobileNavProps) {
   useLockBody();
-
   return (
     <div
       className={cn(
@@ -36,6 +36,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60",
               )}
+              onClick={menuItemClick}
             >
               {item.title}
             </Link>

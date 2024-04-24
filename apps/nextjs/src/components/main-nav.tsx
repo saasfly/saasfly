@@ -21,7 +21,12 @@ interface MainNavProps {
 export function MainNav({ items, children, params: { lang } }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
-
+  const toggleMenu = () => {
+      setShowMobileMenu(!showMobileMenu)
+  }
+  const handleMenuItemClick = () => {
+    toggleMenu();
+  }
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href={`/${lang}`} className="hidden items-center space-x-2 md:flex">
@@ -56,7 +61,7 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
+        <MobileNav items={items} menuItemClick={handleMenuItemClick}>{children}</MobileNav>
       )}
     </div>
   );
