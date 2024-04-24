@@ -1,3 +1,4 @@
+import { withPayload } from '@payloadcms/next/withPayload'
 // @ts-check
 import "./src/env.mjs";
 import "@saasfly/auth/env.mjs";
@@ -33,4 +34,4 @@ const config = {
   output: "standalone",
 };
 
-export default withMDX()(config);
+export default withPayload(withMDX()(config));
