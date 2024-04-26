@@ -11,14 +11,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@auth/kysely-adapter": "0.4.2",
     "@saasfly/db": "workspace:*",
     "@t3-oss/env-nextjs": "0.8.0",
-    "next": "14.2.2",
-    "next-auth": "4.24.5",
+    "next": "14.0.3",
+    "next-auth": "^5.0.0-beta.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "zod": "3.22.4",
-    "@auth/kysely-adapter": "0.4.2"
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@saasfly/eslint-config": "workspace:*",
