@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-import { NextRequest, NextResponse } from "next/server";
-import { match as matchLocale } from "@formatjs/intl-localematcher";
+import {NextRequest, NextResponse} from "next/server";
+import {match as matchLocale} from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import { getToken } from "next-auth/jwt";
-import { withAuth } from "next-auth/middleware";
 
-import { i18n } from "~/config/i18n-config";
+import {i18n} from "~/config/i18n-config";
+import {auth} from "@saasfly/auth";
 
 const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
 
@@ -87,50 +85,44 @@ export default async function middleware(request: NextRequest) {
   return authMiddleware(request, null);
 }
 
-const authMiddleware = withAuth(
-  async function middlewares(req) {
-    const token = await getToken({ req });
-    const isAuth = !!token;
-    const isAdmin = token?.isAdmin;
-    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
+// @ts-ignore
+const authMiddleware = auth((req,res) => {
+  // @ts-ignore
+  const token =  auth(req, res);
+  const isAuth = !!token;
+  // @ts-ignore
+  const isAdmin = token?.isAdmin;
+  // @ts-ignore
+  const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
       req.nextUrl.pathname,
-    );
-    const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
-    const locale = getLocale(req);
+  );
+  const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
+  const locale = getLocale(req);
 
-    if (isAuthRoute && isAuth) {
-      return NextResponse.next();
+  if (isAuthRoute && isAuth) {
+    return NextResponse.next();
+  }
+  if (req.nextUrl.pathname.startsWith("/admin/dashboard")) {
+    if (!isAuth || !isAdmin)
+      return NextResponse.redirect(new URL(`/admin/login`, req.url));
+    return NextResponse.next();
+  }
+  if (isAuthPage) {
+    if (isAuth) {
+      return NextResponse.redirect(new URL(`/${locale}/dashboard`, req.url));
     }
-    if (req.nextUrl.pathname.startsWith("/admin/dashboard")) {
-      if (!isAuth || !isAdmin)
-        return NextResponse.redirect(new URL(`/admin/login`, req.url));
-      return NextResponse.next();
+    return null;
+  }
+  if (!isAuth) {
+    let from = req.nextUrl.pathname;
+    if (req.nextUrl.search) {
+      from += req.nextUrl.search;
     }
-    if (isAuthPage) {
-      if (isAuth) {
-        return NextResponse.redirect(new URL(`/${locale}/dashboard`, req.url));
-      }
-      return null;
-    }
-    if (!isAuth) {
-      let from = req.nextUrl.pathname;
-      if (req.nextUrl.search) {
-        from += req.nextUrl.search;
-      }
-      return NextResponse.redirect(
+    return NextResponse.redirect(
         new URL(`/${locale}/login?from=${encodeURIComponent(from)}`, req.url),
-      );
-    }
-  },
-  {
-    callbacks: {
-      authorized() {
-        return true;
-      },
-    },
-  },
-);
-
+    );
+  }
+})
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };

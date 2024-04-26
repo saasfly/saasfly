@@ -4,6 +4,8 @@ import { getToken, type JWT } from "next-auth/jwt";
 import { ZodError } from "zod";
 
 import { transformer } from "./transformer";
+import {env} from "./env.mjs";
+import {auth} from "@saasfly/auth";
 
 interface CreateContextOptions {
   req?: NextRequest;
@@ -48,5 +50,6 @@ export const protectedProcedure = procedure.use(async (opts) => {
 
 async function handler(req: NextRequest): Promise<JWT | null> {
   // if using `NEXTAUTH_SECRET` env variable, we detect it, and you won't actually need to `secret`
-  return await getToken({ req });
+  // @ts-ignore
+  return await auth();
 }
