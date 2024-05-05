@@ -20,11 +20,11 @@
     "tailwind-config-viewer": " tailwind-config-viewer -c ./index.js -o -p 3333"
   },
   "devDependencies": {
-    "@turbo/gen": "1.13.2",
+    "@turbo/gen": "1.13.3",
     "check-dependency-version-consistency": "4.1.0",
     "prettier": "3.2.5",
     "tailwind-config-viewer": "^2.0.1",
-    "turbo": "1.13.2",
+    "turbo": "1.13.3",
     "typescript": "5.4.4"
   },
   "engines": {
