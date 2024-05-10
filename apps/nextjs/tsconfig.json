@@ -19,7 +19,8 @@
     "*.ts",
     "*.tsx",
     "*.mjs",
-    "src"
+    "src",
+    "contentlayer.config.ts"
   ],
   "exclude": ["node_modules"]
 }
