@@ -66,7 +66,7 @@ export default async function DashboardLayout({
         </main>
       </div>
       <SiteFooter
-        className="border-t"
+        className="border-t border-border"
         params={{ lang: `${lang}` }}
         dict={dict.common}
       />
