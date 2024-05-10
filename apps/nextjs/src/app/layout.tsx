@@ -13,6 +13,7 @@ import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { ThemeProvider } from "~/components/theme-provider";
 import { i18n } from "~/config/i18n-config";
 import { siteConfig } from "~/config/site";
+import {NextDevtoolsProvider} from "@next-devtools/core";
 
 // import { Suspense } from "react";
 // import { PostHogPageview } from "~/config/providers";
@@ -93,7 +94,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
+          <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
           <Analytics />
           <SpeedInsights />
           <Toaster />

@@ -4,6 +4,7 @@ import "@saasfly/auth/env.mjs";
 
 // import "@saasfly/api/env"
 import withMDX from "@next/mdx";
+import {withNextDevtools} from "@next-devtools/core/plugin";
 
 !process.env.SKIP_ENV_VALIDATION && (await import("./src/env.mjs"));
 
@@ -33,4 +34,4 @@ const config = {
   output: "standalone",
 };
 
-export default withMDX()(config);
+export default withNextDevtools(withMDX()(config));
