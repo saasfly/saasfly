@@ -8,3 +8,4 @@ src/components/price/pricing-cards.tsx
 src/components/user-account-nav.tsx
 src/lib/toc.ts
 src/middleware.ts
+contentlayer.config.ts

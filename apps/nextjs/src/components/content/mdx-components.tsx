@@ -2,7 +2,7 @@
 // @ts-nocheck
 import * as React from "react";
 import NextImage, { ImageProps } from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import { cn } from "@saasfly/ui";
 import { Callout } from "@saasfly/ui/callout";

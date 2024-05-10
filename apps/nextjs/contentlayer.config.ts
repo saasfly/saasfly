@@ -1,11 +1,11 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { ComputedFields, defineDocumentType, makeSource } from "contentlayer2/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const defaultComputedFields: ComputedFields = {
   slug: {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
@@ -33,7 +33,7 @@ export const Doc = defineDocumentType(() => ({
       default: true,
     },
   },
-  computedFields,
+  computedFields:defaultComputedFields
 }));
 
 export const Guide = defineDocumentType(() => ({
@@ -61,7 +61,7 @@ export const Guide = defineDocumentType(() => ({
       default: false,
     },
   },
-  computedFields,
+  computedFields:defaultComputedFields
 }));
 
 export const Post = defineDocumentType(() => ({
@@ -98,7 +98,7 @@ export const Post = defineDocumentType(() => ({
       required: true,
     },
   },
-  computedFields,
+  computedFields:defaultComputedFields
 }));
 
 export const Author = defineDocumentType(() => ({
@@ -122,7 +122,7 @@ export const Author = defineDocumentType(() => ({
       required: true,
     },
   },
-  computedFields,
+  computedFields:defaultComputedFields
 }));
 
 export const Page = defineDocumentType(() => ({
@@ -138,7 +138,7 @@ export const Page = defineDocumentType(() => ({
       type: "string",
     },
   },
-  computedFields,
+  computedFields:defaultComputedFields,
 }));
 
 export default makeSource({
@@ -152,14 +152,14 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: "github-dark",
-          onVisitLine(node) {
+          onVisitLine(node: { children: string | any[]; }) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          onVisitHighlightedLine(node) {
+          onVisitHighlightedLine(node: { properties: { className: string[]; }; }) {
             // node.properties.className.push("line--highlighted")
 
             // FIX: I changed remark-gmf 4.0.0 to 3.0.1 (return a lot errors in mdx?)
@@ -172,7 +172,7 @@ export default makeSource({
               node.properties.className = ["line--highlighted"];
             }
           },
-          onVisitHighlightedWord(node) {
+          onVisitHighlightedWord(node: { properties: { className: string[]; }; }) {
             node.properties.className = ["word--highlighted"];
           },
         },
