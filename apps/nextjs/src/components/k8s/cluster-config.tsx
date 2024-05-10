@@ -24,6 +24,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@saasfly/ui/form";
+import * as Icons from "@saasfly/ui/icons";
 import { Input } from "@saasfly/ui/input";
 import { Label } from "@saasfly/ui/label";
 import {
@@ -341,7 +342,12 @@ export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
             </div>
           </CardContent>
           <div className="w-2/3 space-y-6 p-6 pt-0">
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={_isSaving}>
+            {_isSaving && (
+              <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
+            )}
+              Submit
+              </Button>
           </div>
         </Card>
       </form>
