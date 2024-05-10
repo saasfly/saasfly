@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@saasfly/typescript-config": "workspace:*",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
   "prettier": "@saasfly/prettier-config"
 }

@@ -30,7 +30,7 @@
     "prisma": "5.9.1",
     "prisma-kysely": "1.7.1",
     "@types/pg": "8.11.0",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
   "eslintConfig": {
     "root": true,

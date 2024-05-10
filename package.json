@@ -25,7 +25,7 @@
     "prettier": "3.2.5",
     "tailwind-config-viewer": "^2.0.1",
     "turbo": "1.13.3",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
   "engines": {
     "node": ">=18"
