@@ -10,7 +10,7 @@ import GitHubProvider from "next-auth/providers/github";
 
 import { MagicLinkEmail, resend, siteConfig } from "@saasfly/common";
 
-// import { db } from "./db";
+import { db } from "./db";
 import { env } from "./env.mjs";
 
 type UserId = string;
