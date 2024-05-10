@@ -37,7 +37,7 @@ export default async function MarketingLayout({
       <ModalProvider dict={dict.login} />
       <main className="flex-1">{children}</main>
       <SiteFooter
-        className="border-t"
+        className="border-t border-border"
         params={{ lang: `${lang}` }}
         dict={dict.common}
       />
