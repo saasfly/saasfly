@@ -6,9 +6,7 @@
 // import { loggerLink } from "@trpc/client";
 // import { experimental_createTRPCNextAppDirServer } from "@trpc/next/app-dir/server";
 //
-import type {AppRouter} from "@saasfly/api";
-import {cookies} from 'next/headers';
-import superjson from 'superjson';
+import { cookies } from "next/headers";
 //
 // import { endingLink, transformer } from "./shared";
 //
@@ -41,10 +39,14 @@ import superjson from 'superjson';
 //   },
 // });
 //
-import {loggerLink} from '@trpc/client';
-import {experimental_createTRPCNextAppDirServer} from '@trpc/next/app-dir/server';
-import {experimental_nextHttpLink} from "@trpc/next/app-dir/links/nextHttp";
-import {getUrl} from "~/trpc/shared";
+import { loggerLink } from "@trpc/client";
+import { experimental_nextHttpLink } from "@trpc/next/app-dir/links/nextHttp";
+import { experimental_createTRPCNextAppDirServer } from "@trpc/next/app-dir/server";
+import superjson from "superjson";
+
+import type { AppRouter } from "@saasfly/api";
+
+import { getUrl } from "~/trpc/shared";
 
 /**
  * This client invokes procedures directly on the server without fetching over HTTP.
@@ -57,16 +59,16 @@ export const trpc = experimental_createTRPCNextAppDirServer<AppRouter>({
           enabled: () => true,
         }),
         experimental_nextHttpLink({
-          // batch: true,
+          batch: true,
           url: getUrl(),
           transformer: superjson,
           headers() {
             return {
               cookie: cookies().toString(),
-              'x-trpc-source': 'rsc-http',
+              "x-trpc-source": "rsc-http",
             };
           },
-        })
+        }),
       ],
     };
   },
