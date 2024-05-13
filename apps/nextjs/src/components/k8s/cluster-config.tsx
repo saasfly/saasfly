@@ -343,11 +343,11 @@ export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
           </CardContent>
           <div className="w-2/3 space-y-6 p-6 pt-0">
             <Button type="submit" disabled={_isSaving}>
-            {_isSaving && (
-              <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
-            )}
+              {_isSaving && (
+                <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
+              )}
               Submit
-              </Button>
+            </Button>
           </div>
         </Card>
       </form>

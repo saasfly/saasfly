@@ -14,7 +14,7 @@ interface MobileNavProps {
   menuItemClick?: () => void;
 }
 
-export function MobileNav({ items, children, menuItemClick}: MobileNavProps) {
+export function MobileNav({ items, children, menuItemClick }: MobileNavProps) {
   useLockBody();
   return (
     <div
