@@ -65,7 +65,7 @@
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
     "@saasfly/tailwind-config": "workspace:*",
-    "@types/react": "18.2.30",
+    "@types/react": "18.3.2",
     "@tanstack/react-table": "8.17.0",
     "date-fns": "3.3.1",
     "eslint": "8.57.0",
