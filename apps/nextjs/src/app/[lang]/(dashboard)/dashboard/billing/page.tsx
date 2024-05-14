@@ -12,6 +12,8 @@ import { getDictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 import { SubscriptionForm } from "./subscription-form";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Billing",
   description: "Manage billing and your subscription plan.",

@@ -20,6 +20,8 @@ import { getDictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 import type { ClustersArray } from "~/types/k8s";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Dashboard",
 };
