@@ -17,8 +17,8 @@
     "with-env": "dotenv -e ../../.env.local --"
   },
   "dependencies": {
-    "kysely": "0.27.2",
-    "@vercel/postgres-kysely": "0.7.2"
+    "kysely": "0.27.3",
+    "@vercel/postgres-kysely": "0.8.0"
   },
   "devDependencies": {
     "@saasfly/eslint-config": "workspace:*",
