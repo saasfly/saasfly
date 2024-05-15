@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-import { NextRequest, NextResponse } from "next/server";
-import { match as matchLocale } from "@formatjs/intl-localematcher";
+import {NextRequest, NextResponse} from "next/server";
+import {match as matchLocale} from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import { getToken } from "next-auth/jwt";
-import { withAuth } from "next-auth/middleware";
 
-import { i18n } from "~/config/i18n-config";
+import {i18n} from "~/config/i18n-config";
+import {auth} from "@saasfly/auth";
 
 const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
 
@@ -28,7 +26,7 @@ function getLocale(request: NextRequest): string | undefined {
   const locales = Array.from(i18n.locales);
   // Use negotiator and intl-localematcher to get best locale
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales,
+      locales,
   );
   return matchLocale(languages, locales, i18n.defaultLocale);
 }
@@ -48,89 +46,73 @@ function isNoNeedProcess(request: NextRequest): boolean {
   return noNeedProcessRoute.some((route) => new RegExp(route).test(pathname));
 }
 
-/**
- * 1、 if the request is public page and don't have locale, redirect to locale page
- * 2、 if the request is not public page and don't have locale, redirect to login page
- * 3、
- * @param request
- * @returns
- */
-export default async function middleware(request: NextRequest) {
-  if (isNoNeedProcess(request)) {
-    return null;
+// @ts-ignore
+export default auth((req) => {
+  if (isNoNeedProcess(req)) {
+    return NextResponse.next();
   }
-  const isWebhooksRoute = /^\/api\/webhooks\//.test(request.nextUrl.pathname);
+  const isWebhooksRoute = /^\/api\/webhooks\//.test(req.nextUrl.pathname);
   if (isWebhooksRoute) {
     return NextResponse.next();
   }
-  const pathname = request.nextUrl.pathname;
+  const pathname = req.nextUrl.pathname;
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) =>
-      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
+      (locale) =>
+          !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
   // Redirect if there is no locale
-  if (!isNoRedirect(request) && pathnameIsMissingLocale) {
-    const locale = getLocale(request);
+  if (!isNoRedirect(req) && pathnameIsMissingLocale) {
+    const locale = getLocale(req);
     return NextResponse.redirect(
-      new URL(
-        `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
-        request.url,
-      ),
+        new URL(
+            `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
+            req.url,
+        ),
     );
   }
-
-  if (isPublicPage(request)) {
-    return null;
+  if (isPublicPage(req)) {
+    return NextResponse.next();
   }
   // @ts-ignore
-  return authMiddleware(request, null);
-}
-
-const authMiddleware = withAuth(
-  async function middlewares(req) {
-    const token = await getToken({ req });
-    const isAuth = !!token;
-    const isAdmin = token?.isAdmin;
-    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
+  const session = req.auth;
+  const isAuth = !!session?.user;
+  // @ts-ignore
+  const isAdmin = session?.isAdmin;
+  // @ts-ignore
+  const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
       req.nextUrl.pathname,
-    );
-    const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
-    const locale = getLocale(req);
+  );
+  const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
+  const locale = getLocale(req);
 
-    if (isAuthRoute && isAuth) {
-      return NextResponse.next();
+  if (isAuthRoute && isAuth) {
+    return NextResponse.next();
+  }
+  if (req.nextUrl.pathname.startsWith("/admin/dashboard")) {
+    if (!isAuth || !isAdmin)
+      return NextResponse.redirect(new URL(`/admin/login`, req.url));
+    return NextResponse.next();
+  }
+  if (isAuthPage) {
+    if (isAuth) {
+      return NextResponse.redirect(new URL(`/${locale}/dashboard`, req.url));
     }
-    if (req.nextUrl.pathname.startsWith("/admin/dashboard")) {
-      if (!isAuth || !isAdmin)
-        return NextResponse.redirect(new URL(`/admin/login`, req.url));
-      return NextResponse.next();
+    return;
+  }
+
+  if (!isAuth) {
+    let from = req.nextUrl.pathname;
+    if (req.nextUrl.search) {
+      from += req.nextUrl.search;
     }
-    if (isAuthPage) {
-      if (isAuth) {
-        return NextResponse.redirect(new URL(`/${locale}/dashboard`, req.url));
-      }
-      return null;
-    }
-    if (!isAuth) {
-      let from = req.nextUrl.pathname;
-      if (req.nextUrl.search) {
-        from += req.nextUrl.search;
-      }
-      return NextResponse.redirect(
+    return NextResponse.redirect(
         new URL(`/${locale}/login?from=${encodeURIComponent(from)}`, req.url),
-      );
-    }
-  },
-  {
-    callbacks: {
-      authorized() {
-        return true;
-      },
-    },
-  },
-);
+    );
+  }
+  return NextResponse.next()
+})
 
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)", "/", ],
 };
