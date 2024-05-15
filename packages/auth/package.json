@@ -11,11 +11,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@auth/kysely-adapter": "0.4.2",
+    "@auth/kysely-adapter": "1.1.0",
     "@saasfly/db": "workspace:*",
     "@t3-oss/env-nextjs": "0.8.0",
     "next": "14.2.3",
-    "next-auth": "4.24.7",
+    "next-auth": "5.0.0-beta.18",
+    "@auth/core": "0.31.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "3.22.4"

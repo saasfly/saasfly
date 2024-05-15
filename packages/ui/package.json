@@ -74,7 +74,7 @@
     "react-day-picker": "8.10.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.50.1",
-    "tailwindcss": "3.4.1",
+    "tailwindcss": "3.4.3",
     "tailwindcss-animate": "1.0.7",
     "typescript": "5.4.5"
   },

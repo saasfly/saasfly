@@ -9,10 +9,10 @@ export const env = createEnv({
     NEXT_PUBLIC_STRIPE_BUSINESS_PRODUCT_ID: z.string().optional(),
     NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID: z.string().optional(),
     NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID: z.string().optional(),
-    NEXTAUTH_URL: z.string(),
+    NEXTAUTH_URL: z.string().optional(),
   },
   server: {
-    NEXTAUTH_URL: z.string(),
+    NEXTAUTH_URL: z.string().optional(),
     NEXTAUTH_SECRET: z.string().min(1),
     RESEND_API_KEY: z.string().min(1),
   },
