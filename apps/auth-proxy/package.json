@@ -7,7 +7,7 @@
     "clean": "rm -rf .turbo node_modules",
     "dev": "nitro dev --port 3001",
     "lint": "eslint",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format": "prettier --write '**/*.{js,cjs,mjs,ts,tsx,md,json}'  --ignore-path .prettierignore",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
