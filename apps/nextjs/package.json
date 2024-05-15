@@ -57,7 +57,7 @@
     "@saasfly/typescript-config": "workspace:*",
     "@types/mdx": "2.0.10",
     "@types/negotiator": "0.6.3",
-    "@types/node": "20.10.5",
+    "@types/node": "20.12.12",
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.17",

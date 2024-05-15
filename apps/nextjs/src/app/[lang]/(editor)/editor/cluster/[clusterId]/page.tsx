@@ -7,7 +7,7 @@ import { db } from "@saasfly/db";
 import { ClusterConfig } from "~/components/k8s/cluster-config";
 import type { Cluster } from "~/types/k8s";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 async function getClusterForUser(clusterId: Cluster["id"], userId: User["id"]) {
   return await db
