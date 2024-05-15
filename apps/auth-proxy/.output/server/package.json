@@ -1,0 +1,16 @@
+{
+  "name": "@saasfly/auth-proxy-prod",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@auth/core": "0.31.0",
+    "@panva/hkdf": "1.1.1",
+    "cookie": "0.6.0",
+    "jose": "5.2.3",
+    "oauth4webapi": "2.10.3",
+    "preact": "10.11.3",
+    "preact-render-to-string": "5.2.3",
+    "std-env": "3.7.0"
+  }
+}

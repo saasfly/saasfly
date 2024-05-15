@@ -1,7 +1,6 @@
-import { getServerSession } from "next-auth/next";
 import { z } from "zod";
 
-import { authOptions } from "@saasfly/auth";
+import { auth } from "@saasfly/auth";
 import { db, SubscriptionPlan } from "@saasfly/db";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
@@ -21,7 +20,8 @@ export const customerRouter = createTRPCRouter({
     .input(updateUserNameSchema)
     .mutation(async ({ input }) => {
       const { userId } = input;
-      const session = await getServerSession(authOptions);
+
+      const session = await auth();
       if (!session?.user || userId !== session?.user.id) {
         return { success: false, reason: "no auth" };
       }
@@ -52,19 +52,6 @@ export const customerRouter = createTRPCRouter({
     .input(insertCustomerSchema)
     .query(async ({ input }) => {
       const { userId } = input;
-      console.log("userId:", userId);
-      try {
-        console.log(
-          "result:",
-          await db
-            .selectFrom("Customer")
-            .where("authUserId", "=", userId)
-            .executeTakeFirst(),
-        );
-      } catch (e) {
-        console.error("e:", e);
-      }
-
       return await db
         .selectFrom("Customer")
         .where("authUserId", "=", userId)

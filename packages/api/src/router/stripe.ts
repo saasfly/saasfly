@@ -1,8 +1,7 @@
 import { z } from "zod";
 
 import { getCurrentUser } from "@saasfly/auth";
-import type { Customer} from "@saasfly/db";
-import { db } from "@saasfly/db";
+import { db, type Customer } from "@saasfly/db";
 import { stripe } from "@saasfly/stripe";
 
 import { pricingData } from "../../../common/src/subscriptions";
