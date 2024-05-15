@@ -1,7 +1,8 @@
 import { z } from "zod";
 
 import { getCurrentUser } from "@saasfly/auth";
-import { Customer, db } from "@saasfly/db";
+import type { Customer} from "@saasfly/db";
+import { db } from "@saasfly/db";
 import { stripe } from "@saasfly/stripe";
 
 import { pricingData } from "../../../common/src/subscriptions";
@@ -45,7 +46,7 @@ export const stripeRouter = createTRPCRouter({
         .where("authUserId", "=", userId)
         .executeTakeFirst();
 
-      const returnUrl = env.NEXTAUTH_URL + "/dashboard";
+      const returnUrl = env.process.env.VERCEL_URL + "/dashboard";
 
       if (customer && customer.plan !== "FREE") {
         /**
