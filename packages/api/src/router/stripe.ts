@@ -46,7 +46,7 @@ export const stripeRouter = createTRPCRouter({
         .where("authUserId", "=", userId)
         .executeTakeFirst();
 
-      const returnUrl = env.process.env.VERCEL_URL + "/dashboard";
+      const returnUrl = process.env.VERCEL_URL + "/dashboard";
 
       if (customer && customer.plan !== "FREE") {
         /**

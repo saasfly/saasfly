@@ -40,7 +40,7 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
     return {};
   }
 
-  const url = env.NEXT_PUBLIC_APP_URL;
+  const url = process.env.VERCEL_URL;
 
   const ogUrl = new URL(`${url}/api/og`);
   ogUrl.searchParams.set("heading", post.title);

@@ -39,7 +39,7 @@ export function generateMetadata({ params }: DocPageProps): Metadata {
     return {};
   }
 
-  const url = env.NEXT_PUBLIC_APP_URL;
+  const url = process.env.VERCEL_URL;
 
   const ogUrl = new URL(`${url}/api/og`);
   ogUrl.searchParams.set("heading", doc.description ?? doc.title);
