@@ -66,7 +66,7 @@ export default async function IndexPage({
 
       <section
         id="saasfly"
-        className="container mb-8 space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"
+        className="container mb-8 space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
@@ -83,7 +83,7 @@ export default async function IndexPage({
 
       <section
         id="company"
-        className="container mb-8 space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"
+        className="container mb-8 space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <InfiniteMovingCardss />
@@ -91,7 +91,7 @@ export default async function IndexPage({
       </section>
       <section
         id="features"
-        className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"
+        className="container space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
@@ -105,12 +105,12 @@ export default async function IndexPage({
           <HoverEffects />
         </div>
       </section>
-      <section
-        id="Globes"
-        className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"
-      >
+      {/*<section*/}
+      {/*  id="Globes"*/}
+      {/*  className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"*/}
+      {/*>*/}
         {/*<Globes />*/}
-      </section>
+      {/*</section>*/}
     </>
   );
 }
