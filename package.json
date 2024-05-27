@@ -36,5 +36,5 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@1.1.8"
+  "packageManager": "bun@v1.1.10"
 }
