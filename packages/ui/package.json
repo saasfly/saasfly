@@ -113,6 +113,7 @@
     "./infinite-moving-cards": "./src/infinite-moving-cards.tsx",
     "./input": "./src/input.tsx",
     "./label": "./src/label.tsx",
+    "./marquee": "./src/marquee.tsx",
     "./meteors": "./src/meteors.tsx",
     "./popover": "./src/popover.tsx",
     "./scroll-area": "./src/scroll-area.tsx",
@@ -127,6 +128,7 @@
     "./text-reveal": "./src/text-reveal.tsx",
     "./toaster": "./src/toaster.tsx",
     "./typewriter-effect": "./src/typewriter-effect.tsx",
-    "./use-toast": "./src/use-toast.tsx"
+    "./use-toast": "./src/use-toast.tsx",
+    "./wobble-card": "./src/wobble-card.tsx"
   }
 }

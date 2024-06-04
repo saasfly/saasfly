@@ -1,10 +1,8 @@
 import Link from "next/link";
 
 import { HoverEffects } from "~/components/card-hover-effect";
-// import { Globes } from "~/components/globe";
 import { InfiniteMovingCardss } from "~/components/infiniteMovingCards";
 import { Meteorss } from "~/components/meteors-card";
-import { Meteors } from "@saasfly/ui/meteors";
 import ShimmerButton from "~/components/shimmer-button";
 import { Sparkless } from "~/components/sparkles";
 import TextGenerateEffects from "~/components/textGenerateEffect";
@@ -13,6 +11,9 @@ import { DocumentGuide } from "~/components/document-guide";
 import { XBlogArticle } from "~/components/blog-card";
 import { FeaturesCard } from "~/components/features-card";
 import { WordReveal } from "~/components/word-reveal";
+import { WobbleCardShow } from "~/components/wobble";
+import { Questions } from "~/components/questions";
+import { Comments } from "~/components/comments";
 import type { Locale } from "~/config/i18n-config";
 import { getDictionary } from "~/lib/get-dictionary";
 import type { Meteor } from "~/types/meteors";
@@ -90,10 +91,10 @@ export default async function IndexPage({
 
       <section className="w-full h-[100vh]">
         <div className="w-full h-full flex px-[220px] justify-between">
-          <div className="pt-40 flex flex-col pr-4">
-            {/* <NeonGradientCardDemo/> */}
+          <div className="w-[60%] pt-40 flex flex-col pr-4">
+            <WobbleCardShow/>
           </div>
-          <div className="w-full h-full">
+          <div className="w-[40%] h-full">
             <div className="flex flex-col pl-[120px]">
               <WordReveal/>
             </div>
@@ -101,9 +102,30 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="w-full h-[100vh]"></section>
+      <section className="w-full h-[100vh]">
+        <div className="w-full h-full flex px-[220px] justify-between">
+          <div className="w-[60%] pt-40 flex flex-col pr-4">
+            <div className="px-[120px]">
+              <Questions/>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section className="w-full h-[100vh]"></section>
+      <section className="w-full">
+        <div className="w-full h-full flex flex-col px-[220px] pt-[100px] pb-[100px] items-center">
+          <div>
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 relative text-left dark:text-zinc-100 max-w-4xl">What People Are Saying</h1>
+          </div>
+          <div className="text-xl md:text-xl mb-6 dark:text-zinc-100 max-w-4xl">
+            Don't just take our word for it. Here's what <span className="font-bold">real people</span> are saying about Saasfly.
+          </div>
+
+          <div>
+            <Comments/>
+          </div>
+        </div>
+      </section>
 
       {/* <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-12">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
