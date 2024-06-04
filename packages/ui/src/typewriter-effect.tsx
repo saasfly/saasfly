@@ -56,7 +56,7 @@ export const TypewriterEffectImpl = ({
                 initial={{}}
                 key={`char-${index}`}
                 className={cn(
-                  `hidden text-black opacity-0 dark:text-white`,
+                  `hidden text-zinc-500 opacity-0`,
                   word.className,
                 )}
               >
@@ -86,7 +86,7 @@ export const TypewriterEffectImpl = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "inline-block h-4 w-[4px] rounded-sm   bg-blue-500",
+          "inline-block h-4 w-[4px] rounded-sm  bg-blue-500",
           cursorClassName,
         )}
       ></motion.span>

@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from 'next/image';
 
 import { cn } from "@saasfly/ui";
 import { buttonVariants } from "@saasfly/ui/button";
@@ -39,7 +40,7 @@ export default async function LoginPage({
       </Link>
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <div className="flex flex-col space-y-2 text-center">
-          <Icons.Nextjs className="mx-auto h-6 w-6" />
+          <Image src="/images/avatars/saasfly-logo.svg" className="mx-auto" width="24" height="24" alt="" />
           <h1 className="text-2xl font-semibold tracking-tight">
             {dict.login.welcome_back}
           </h1>

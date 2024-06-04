@@ -37,7 +37,8 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 0 0 0;
+    /* --background: 224 71% 4%; */
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -49,8 +50,8 @@
     --popover: 224 71% 4%;
     --popover-foreground: 215 20.2% 65.1%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 0, 0%, 100%, .1;
+    --input: 0, 0%, 100%, .1;
 
     --card: 224 71% 4%;
     --card-foreground: 213 31% 91%;
