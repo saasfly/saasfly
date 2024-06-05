@@ -19,9 +19,11 @@
     "": ""
   },
   "marketing": {
-    "title": "SaaS服务供应商。",
-    "sub_title": "为初创公司提供云原生SaaS解决方案。",
+    "introducing": "介绍 Saasfly",
+    "title": "Saasfly：新的 SaaS 玩家？让事情变得更简单。",
+    "sub_title": "您构建 SaaS 服务的完整一体化解决方案。",
     "get_started": "启 航",
+    "view_on_github": "在 GitHub 上查看",
     "explore_product": "探索产品",
     "features": "特色",
     "sub_features": "云原生：为初创公司简化技术、降低成本而生。",

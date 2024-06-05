@@ -19,9 +19,11 @@
     "": ""
   },
   "marketing": {
-    "title": "SaaSサービスプロバイダ。",
-    "sub_title": "スタートアップ向けのクラウドネイティブSaaSソリューションを提供。",
+    "introducing": "Saasfly の紹介",
+    "title": "Saasfly：新たなSaaSプレーヤー？ 新たなSaaSプレーヤー？もっと簡単に。",
+    "sub_title": "SaaSサービス構築のための完全なAll-in-Oneソリューションです。",
     "get_started": "始める",
+    "view_on_github": "GitHub で見る",
     "explore_product": "製品を探す",
     "features": "特徴",
     "sub_features": "クラウドネイティブ：スタートアップのための技術の簡素化とコスト削減。",

@@ -19,9 +19,11 @@
     "": ""
   },
   "marketing": {
-    "title": "SaaS 서비스 제공자.",
-    "sub_title": "스타트업을 위한 클라우드 네이티브 SaaS 솔루션 제공.",
+    "introducing": "Saasfly 소개",
+    "title": "Saasfly: 새로운 SaaS 플레이어? 일을 더 쉽게 만드세요.",
+    "sub_title": "SaaS 서비스 구축을 위한 완벽한 올인원 솔루션입니다.",
     "get_started": "시작하기",
+    "view_on_github": "GitHub 에서 보기",
     "explore_product": "제품 탐색",
     "features": "특징",
     "sub_features": "클라우드 네이티브: 스타트업을 위한 기술 단순화 및 비용 절감.",
