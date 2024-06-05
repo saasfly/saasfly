@@ -24,7 +24,7 @@ export function WobbleCardShow() {
           src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=1080&q=75"
           width={500}
           height={500}
-          alt="linear demo image"
+          alt="linear demo"
           className="absolute -bottom-10 -right-4 rounded-2xl object-contain grayscale filter lg:-right-[40%]"
         />
       </WobbleCard>
@@ -51,7 +51,7 @@ export function WobbleCardShow() {
           src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=1080&q=75"
           width={500}
           height={500}
-          alt="linear demo image"
+          alt="linear demo"
           className="absolute -bottom-10 -right-10 rounded-2xl object-contain md:-right-[40%] lg:-right-[20%]"
         />
       </WobbleCard>
