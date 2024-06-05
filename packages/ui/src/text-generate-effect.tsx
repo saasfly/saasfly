@@ -48,8 +48,8 @@ const TextGenerateEffectImpl = ({
 
   return (
     <div className={cn("", className)}>
-      <div className="mt-4">
-        <div className="text-2xl leading-snug tracking-wide text-black dark:text-white">
+      <div className="mt-0">
+        <div className="max-w-[750px] text-center text-lg font-light text-foreground">
           {renderWords()}
         </div>
       </div>

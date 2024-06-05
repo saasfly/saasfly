@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
@@ -31,8 +32,14 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href={`/${lang}`} className="hidden items-center space-x-2 md:flex">
         <div>
-          <Icons.Nextjs className="mx-auto h-6 w-6" />
+          <Image
+            src="/images/avatars/saasfly-logo.svg"
+            width="36"
+            height="36"
+            alt=""
+          />
         </div>
+        <div className="text-2xl font-semibold">Saasfly</div>
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex">

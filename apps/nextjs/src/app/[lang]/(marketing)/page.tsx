@@ -1,39 +1,28 @@
 import Link from "next/link";
 
-import { HoverEffects } from "~/components/card-hover-effect";
-// import { Globes } from "~/components/globe";
-import { InfiniteMovingCardss } from "~/components/infiniteMovingCards";
+import * as Icons from "@saasfly/ui/icons";
+
+import { XBlogArticle } from "~/components/blog-card";
+import { Comments } from "~/components/comments";
+import { DocumentGuide } from "~/components/document-guide";
+import { FeaturesCard } from "~/components/features-card";
 import { Meteorss } from "~/components/meteors-card";
+import { Questions } from "~/components/questions";
 import ShimmerButton from "~/components/shimmer-button";
-import { Sparkless } from "~/components/sparkles";
-import TextGenerateEffects from "~/components/textGenerateEffect";
 import { TypewriterEffectSmooths } from "~/components/typewriterEffectSmooth";
+import { WobbleCardShow } from "~/components/wobble";
+import { WordReveal } from "~/components/word-reveal";
 import type { Locale } from "~/config/i18n-config";
 import { getDictionary } from "~/lib/get-dictionary";
 import type { Meteor } from "~/types/meteors";
 
-const meteors_data: Meteor[] = [
-  {
-    name: "Saasfly Github",
-    description: "What are you waiting for? Just kickoff your next App",
-    button_content: "Star Us",
-    url: "https://github.com/saasfly/saasfly",
-  },
-  {
-    name: "Saasfly Docs",
-    description:
-      "Your complete All-in-One solution for building SaaS services.",
-    button_content: "Explore",
-    url: "https://document.saasfly.io",
-  },
-  {
-    name: "Discord",
-    description:
-      "Join our Discord server to chat with other developers and get help.",
-    button_content: "Chat with us",
-    url: "https://discord.com/invite/b9uTZjdkrb",
-  },
-];
+const meteors_data: Meteor = {
+  name: "Join our Discord",
+  description:
+    "Join our Discord server to chat with other developers and get help.",
+  button_content: "Chat with us",
+  url: "https://discord.com/invite/b9uTZjdkrb",
+};
 
 export default async function IndexPage({
   params: { lang },
@@ -46,71 +35,105 @@ export default async function IndexPage({
 
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-12">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            <Sparkless />
-          </h1>
-          <TypewriterEffectSmooths />
-          <div className="">
-            <Link href={`${lang}/login`}>
-              <ShimmerButton>
-                <span className="z-10 whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent ">
-                  {dict.marketing.get_started}
-                </span>
-              </ShimmerButton>
+      <section className="h-[100vh] w-full">
+        <div className="flex h-full w-full justify-between px-[220px]">
+          <div className="flex flex-col pr-4 pt-28">
+            <Link href="https://document.saasfly.io" target="_blank">
+              <DocumentGuide>
+                {dict.marketing.introducing || "Introducing Saasfly"}
+              </DocumentGuide>
             </Link>
+
+            <div className="mt-4 pr-12">
+              <h1 className="relative mb-6 max-w-4xl text-left text-3xl font-bold dark:text-zinc-100 md:text-7xl">
+                {dict.marketing.title ||
+                  "Saasfly: A new SaaS player? Make things easier."}
+              </h1>
+            </div>
+
+            <div>
+              <span className="text-zinc-500 sm:text-xl">
+                {dict.marketing.sub_title ||
+                  "Your complete All-in-One solution for building SaaS services."}
+              </span>
+              <TypewriterEffectSmooths />
+            </div>
+
+            <div className="mt-8 flex">
+              <Link href={`${lang}/login`}>
+                <ShimmerButton>
+                  <span className="z-10 w-36 whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent">
+                    {dict.marketing.get_started}
+                  </span>
+                </ShimmerButton>
+              </Link>
+
+              <Link href="https://github.com/saasfly/saasfly" target="_blank">
+                <div className="ml-10 flex h-full items-center justify-center">
+                  <Icons.GitHub className="mr-2 h-6 w-6" />
+                  <span className="text-base font-semibold">
+                    {dict.marketing.view_on_github || "View on GitHub"}
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="h-full w-full">
+            <div className="flex flex-col pl-[120px] pt-28">
+              <Meteorss meteor={meteors_data} />
+              <div className="mt-4 flex w-full justify-between">
+                <XBlogArticle />
+                <div className="ml-4">
+                  <FeaturesCard />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="saasfly"
-        className="container mb-8 space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Welcome to Saasfly
-          </h2>
-          <TextGenerateEffects />
-        </div>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-          {meteors_data.map((meteor, index) => (
-            <Meteorss key={index} meteor={meteor} />
-          ))}
+      <section className="h-[100vh] w-full">
+        <div className="flex h-full w-full justify-between px-[220px]">
+          <div className="flex w-[60%] flex-col pr-4 pt-40">
+            <WobbleCardShow />
+          </div>
+          <div className="h-full w-[40%]">
+            <div className="flex flex-col pl-[120px]">
+              <WordReveal />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section
-        id="company"
-        className="container mb-8 space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <InfiniteMovingCardss />
+      <section className="h-[90vh] w-full">
+        <div className="flex h-full w-full justify-between px-[220px]">
+          <div className="flex w-[60%] flex-col pr-4 pt-40">
+            <div className="px-[120px]">
+              <Questions />
+            </div>
+          </div>
         </div>
       </section>
-      <section
-        id="features"
-        className="container space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-12"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            {dict.marketing.features}
-          </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            {dict.marketing.sub_features}
-          </p>
-        </div>
-        <div>
-          <HoverEffects />
+
+      <section className="w-full">
+        <div className="flex h-full w-full flex-col items-center px-[220px] pb-[100px] pt-10">
+          <div>
+            <h1 className="relative mb-6 max-w-4xl text-left text-3xl font-bold dark:text-zinc-100 md:text-5xl">
+              What People Are Saying
+            </h1>
+          </div>
+          <div className="mb-6 max-w-4xl text-xl dark:text-zinc-100 md:text-xl">
+            Don’t just take our word for it. Here’s what{" "}
+            <span className="font-bold">real people</span> are saying about
+            Saasfly.
+          </div>
+
+          <div>
+            <Comments />
+          </div>
         </div>
       </section>
-      {/*<section*/}
-      {/*  id="Globes"*/}
-      {/*  className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-12"*/}
-      {/*>*/}
-        {/*<Globes />*/}
-      {/*</section>*/}
     </>
   );
 }

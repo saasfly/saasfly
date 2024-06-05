@@ -19,9 +19,11 @@
     "": ""
   },
   "marketing": {
-    "title": "SaaS service provider.",
-    "sub_title": "Providing cloud-native SaaS solutions for startups.",
+    "introducing": "Introducing Saasfly",
+    "title": "Saasfly: A new SaaS player? Make things easier.",
+    "sub_title": "Your complete All-in-One solution for building SaaS services.",
     "get_started": "Get Started",
+    "view_on_github": "View on GitHub",
     "explore_product": "Explore Product",
     "features": "Features",
     "sub_features": "Cloud-native: Simplifying technology and reducing costs for startups.",

@@ -83,6 +83,10 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
         },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
         slide: {
           to: {
             transform: "translate(calc(100cqw - 100%), 0)",
@@ -108,6 +112,7 @@ export default {
         spinLinear: "spin calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
         marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

@@ -9,3 +9,6 @@ src/utils/
 src/table.tsx
 src/sparkles.tsx
 src/globe.tsx
+src/following-pointer.tsx
+src/marquee.tsx
+src/text-reveal.tsx

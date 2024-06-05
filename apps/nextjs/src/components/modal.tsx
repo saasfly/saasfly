@@ -3,7 +3,7 @@
 import { Drawer } from "vaul";
 
 import { cn } from "@saasfly/ui";
-import { Dialog, DialogContent } from "@saasfly/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@saasfly/ui/dialog";
 
 import useMediaQuery from "~/hooks/use-media-query";
 
@@ -45,6 +45,7 @@ export function Modal({
   }
   return (
     <Dialog open={showModal} onOpenChange={setShowModal}>
+      <DialogTitle></DialogTitle>
       <DialogContent className="overflow-hidden p-0 md:max-w-md md:rounded-2xl md:border">
         {children}
       </DialogContent>
