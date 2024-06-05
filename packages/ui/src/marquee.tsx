@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { cn } from "./utils/cn";
 
 interface MarqueeProps {
@@ -8,6 +7,7 @@ interface MarqueeProps {
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
+  // @ts-ignore
   [key: string]: any;
 }
 

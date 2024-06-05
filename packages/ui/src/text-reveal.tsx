@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client";
 
 import { FC, ReactNode, useRef } from "react";
@@ -52,6 +51,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
 
 interface WordProps {
   children: ReactNode;
+  // @ts-ignore
   progress: any;
   range: [number, number];
 }

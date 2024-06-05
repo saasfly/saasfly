@@ -1,5 +1,4 @@
 // Core component that receives mouse positions and renders pointer and content
-// @ts-nocheck
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -67,7 +66,9 @@ export const FollowPointer = ({
   y,
   title,
 }: {
+  // @ts-ignore
   x: any;
+  // @ts-ignore
   y: any;
   title?: string | React.ReactNode;
 }) => {
