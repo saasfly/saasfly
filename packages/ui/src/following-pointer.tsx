@@ -1,6 +1,5 @@
 // Core component that receives mouse positions and renders pointer and content
-// @ts-ignore
-// @ts-nocheck
+// @ts-expect-error
 "use client";
 
 import React, { useEffect, useState } from "react";

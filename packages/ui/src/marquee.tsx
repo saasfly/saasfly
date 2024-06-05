@@ -1,5 +1,4 @@
-// @ts-ignore
-// @ts-nocheck
+// @ts-expect-error
 
 import { cn } from "./utils/cn";
 
