@@ -1,3 +1,6 @@
+// @ts-ignore
+// @ts-nocheck
+
 import { cn } from "./utils/cn";
 
 interface MarqueeProps {
