@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 "use client";
 
 import { FC, ReactNode, useRef } from "react";
@@ -49,7 +51,6 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   );
 };
 
-// @ts-ignore
 interface WordProps {
   children: ReactNode;
   progress: any;
