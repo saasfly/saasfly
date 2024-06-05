@@ -1,6 +1,6 @@
 import { Auth } from "@auth/core";
-import { eventHandler, toWebRequest } from "h3";
 import GitHub from "@auth/core/providers/github";
+import { eventHandler, toWebRequest } from "h3";
 
 export default eventHandler(async (event) =>
   Auth(toWebRequest(event), {

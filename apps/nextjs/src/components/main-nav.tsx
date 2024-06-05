@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Image from 'next/image';
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { cn } from "@saasfly/ui";
@@ -32,7 +32,12 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href={`/${lang}`} className="hidden items-center space-x-2 md:flex">
         <div>
-          <Image src="/images/avatars/saasfly-logo.svg" width="36" height="36" alt="" />
+          <Image
+            src="/images/avatars/saasfly-logo.svg"
+            width="36"
+            height="36"
+            alt=""
+          />
         </div>
         <div className="text-2xl font-semibold">Saasfly</div>
       </Link>

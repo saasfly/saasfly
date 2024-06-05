@@ -84,7 +84,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
 
 export function FeaturesCard() {
   return (
-    <div className="relative flex max-h-[435px] min-h-[435px] flex-col overflow-hidden rounded-2xl border dark:border-[#443c3c] bg-background p-6 shadow-lg">
+    <div className="relative flex max-h-[435px] min-h-[435px] flex-col overflow-hidden rounded-2xl border bg-background p-6 shadow-lg dark:border-[#443c3c]">
       <AnimatedList>
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />

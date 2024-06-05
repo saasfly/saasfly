@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { signIn } from "next-auth/react";
-import Image from 'next/image';
 
 import { Button } from "@saasfly/ui/button";
 import * as Icons from "@saasfly/ui/icons";
@@ -20,7 +20,13 @@ export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
       <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-3 border-b bg-background px-4 py-6 pt-8 text-center md:px-16">
           <a href={siteConfig.url}>
-            <Image src="/images/avatars/saasfly-logo.svg" className="mx-auto" width="64" height="64" alt="" />
+            <Image
+              src="/images/avatars/saasfly-logo.svg"
+              className="mx-auto"
+              width="64"
+              height="64"
+              alt=""
+            />
           </a>
           <h3 className="font-urban text-2xl font-bold">{dict.signup}</h3>
           <p className="text-sm text-gray-500">{dict.privacy}</p>
