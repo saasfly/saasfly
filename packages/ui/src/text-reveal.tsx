@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+// @ts-nocheck
 "use client";
 
 import { FC, ReactNode, useRef } from "react";

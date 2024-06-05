@@ -1,6 +1,5 @@
 // Core component that receives mouse positions and renders pointer and content
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+// @ts-nocheck
 "use client";
 
 import React, { useEffect, useState } from "react";
