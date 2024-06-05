@@ -1,7 +1,6 @@
-// @ts-expect-error
-
 import { cn } from "./utils/cn";
 
+// @ts-ignore
 interface MarqueeProps {
   className?: string;
   reverse?: boolean;
