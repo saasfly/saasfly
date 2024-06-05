@@ -7,7 +7,6 @@ interface MarqueeProps {
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
-  // @ts-ignore
   [key: string]: any;
 }
 

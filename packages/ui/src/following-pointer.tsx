@@ -66,9 +66,7 @@ export const FollowPointer = ({
   y,
   title,
 }: {
-  // @ts-ignore
   x: any;
-  // @ts-ignore
   y: any;
   title?: string | React.ReactNode;
 }) => {

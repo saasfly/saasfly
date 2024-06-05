@@ -51,7 +51,6 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
 
 interface WordProps {
   children: ReactNode;
-  // @ts-ignore
   progress: any;
   range: [number, number];
 }
