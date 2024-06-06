@@ -106,7 +106,7 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="h-[90vh] w-full">
+      <section className="h-[100vh] w-full">
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
             <div className="px-[120px]">
@@ -117,19 +117,19 @@ export default async function IndexPage({
       </section>
 
       <section className="w-full">
-        <div className="flex h-full w-full flex-col items-center px-[220px] pb-[100px] pt-10">
+        <div className="flex h-full w-full flex-col items-center pb-[100px] pt-10">
           <div>
-            <h1 className="relative mb-6 max-w-4xl text-left text-3xl font-bold dark:text-zinc-100 md:text-5xl">
+            <h1 className="mb-6 text-center text-3xl font-bold dark:text-zinc-100 md:text-5xl">
               What People Are Saying
             </h1>
           </div>
-          <div className="mb-6 max-w-4xl text-xl dark:text-zinc-100 md:text-xl">
+          <div className="mb-6 text-xl dark:text-zinc-100 md:text-xl">
             Don’t just take our word for it. Here’s what{" "}
             <span className="font-bold">real people</span> are saying about
             Saasfly.
           </div>
 
-          <div>
+          <div className="w-full overflow-x-hidden">
             <Comments />
           </div>
         </div>
