@@ -1,10 +1,10 @@
-import { getServerSession } from "next-auth/next";
 import { z } from "zod";
 
 import { authOptions } from "@saasfly/auth";
 import { db, SubscriptionPlan } from "@saasfly/db";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
+import {auth} from "@saasfly/auth/auth";
 
 const updateUserNameSchema = z.object({
   name: z.string(),
@@ -21,7 +21,8 @@ export const customerRouter = createTRPCRouter({
     .input(updateUserNameSchema)
     .mutation(async ({ input }) => {
       const { userId } = input;
-      const session = await getServerSession(authOptions);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
+      const session = await auth();
       if (!session?.user || userId !== session?.user.id) {
         return { success: false, reason: "no auth" };
       }

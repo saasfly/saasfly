@@ -1,11 +1,10 @@
 import { TRPCError } from "@trpc/server";
-import { getServerSession } from "next-auth/next";
 import { z } from "zod";
 
-import { authOptions } from "@saasfly/auth";
 import { db, SubscriptionPlan } from "@saasfly/db";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
+import {auth} from "@saasfly/auth/";
 
 const k8sClusterCreateSchema = z.object({
   id: z.number().optional(),
@@ -19,7 +18,8 @@ const k8sClusterDeleteSchema = z.object({
 
 export const k8sRouter = createTRPCRouter({
   getClusters: protectedProcedure.query(async (opts) => {
-    const session = await getServerSession(authOptions);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
+    const session = await auth();
     const userId = opts.ctx.userId! as string;
     if (!session) {
       return;
@@ -35,7 +35,7 @@ export const k8sRouter = createTRPCRouter({
     .mutation(async ({ ctx, input }) => {
       const userId = ctx.userId! as string;
 
-      const session = await getServerSession(authOptions);
+      const session = await auth();
       if (!session) {
         throw new TRPCError({
           code: "UNAUTHORIZED",
