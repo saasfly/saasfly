@@ -1,13 +1,6 @@
-// @ts-check
 import "./src/env.mjs";
-import "@saasfly/auth/env.mjs";
-
 import { withNextDevtools } from "@next-devtools/core/plugin";
-// import "@saasfly/api/env"
 import withMDX from "@next/mdx";
-
-!process.env.SKIP_ENV_VALIDATION && (await import("./src/env.mjs"));
-
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
