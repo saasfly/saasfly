@@ -27,9 +27,7 @@ You don't need to buy templates anymore; Saasfly provides a complete, open-sourc
 
 Try it out for yourself!
 
-Demo Server1 (Location: Washington - USA): <https://show.saasfly.io>
-
-Demo Server2 (Location: Japan - Tokyo): <https://demo.saasfly.io>
+Demo Server (Location: Washington - USA): <https://show.saasfly.io>
 
 See more documentation at <https://document.saasfly.io>
 
