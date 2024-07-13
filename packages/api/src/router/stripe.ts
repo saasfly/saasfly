@@ -7,6 +7,7 @@ import { stripe } from "@saasfly/stripe";
 import { pricingData } from "../../../common/src/subscriptions";
 import { env } from "../env.mjs";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
+import { unstable_noStore as noStore } from 'next/cache';
 
 export interface SubscriptionPlan {
   title: string;
@@ -112,6 +113,7 @@ export const stripeRouter = createTRPCRouter({
   userPlans: protectedProcedure
     // .output(Promise<UserSubscriptionPlan>)
     .query(async (opts) => {
+        noStore();
       const userId = opts.ctx.userId! as string;
       const custom = await db
         .selectFrom("Customer")

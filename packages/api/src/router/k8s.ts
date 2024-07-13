@@ -6,7 +6,7 @@ import { authOptions } from "@saasfly/auth";
 import { db, SubscriptionPlan } from "@saasfly/db";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
-
+import { unstable_noStore as noStore } from 'next/cache';
 const k8sClusterCreateSchema = z.object({
   id: z.number().optional(),
   name: z.string(),
@@ -19,6 +19,7 @@ const k8sClusterDeleteSchema = z.object({
 
 export const k8sRouter = createTRPCRouter({
   getClusters: protectedProcedure.query(async (opts) => {
+      noStore();
     const session = await getServerSession(authOptions);
     const userId = opts.ctx.userId! as string;
     if (!session) {
