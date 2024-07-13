@@ -27,8 +27,8 @@
   "dependencies": {
     "@saasfly/auth": "workspace:*",
     "@saasfly/db": "workspace:*",
-    "@trpc/client": "next",
-    "@trpc/server": "next",
+    "@trpc/client": "10.45.2",
+    "@trpc/server": "10.45.2",
     "@t3-oss/env-nextjs": "0.8.0",
     "superjson": "2.2.1",
     "dinero.js": "2.0.0-alpha.14",
