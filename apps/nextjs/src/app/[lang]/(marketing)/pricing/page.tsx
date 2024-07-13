@@ -6,8 +6,6 @@ import type { Locale } from "~/config/i18n-config";
 import { getDictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = {
   title: "Pricing",
 };
