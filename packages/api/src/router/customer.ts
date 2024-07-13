@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { getServerSession } from "next-auth/next";
 import { z } from "zod";
 
@@ -5,7 +6,6 @@ import { authOptions } from "@saasfly/auth";
 import { db, SubscriptionPlan } from "@saasfly/db";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
-import { unstable_noStore as noStore } from 'next/cache';
 
 const updateUserNameSchema = z.object({
   name: z.string(),
@@ -52,7 +52,7 @@ export const customerRouter = createTRPCRouter({
   queryCustomer: protectedProcedure
     .input(insertCustomerSchema)
     .query(async ({ input }) => {
-        noStore();
+      noStore();
       const { userId } = input;
       console.log("userId:", userId);
       try {

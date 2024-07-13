@@ -1,5 +1,6 @@
+import { unstable_noStore as noStore } from "next/cache";
+
 import { db } from "@saasfly/db";
-import { unstable_noStore as noStore } from 'next/cache';
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 
