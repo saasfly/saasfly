@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { getServerSession } from "next-auth/next";
 import { z } from "zod";
 
@@ -51,6 +52,7 @@ export const customerRouter = createTRPCRouter({
   queryCustomer: protectedProcedure
     .input(insertCustomerSchema)
     .query(async ({ input }) => {
+      noStore();
       const { userId } = input;
       console.log("userId:", userId);
       try {

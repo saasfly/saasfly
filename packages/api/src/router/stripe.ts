@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { z } from "zod";
 
 import { getCurrentUser } from "@saasfly/auth";
@@ -112,6 +113,7 @@ export const stripeRouter = createTRPCRouter({
   userPlans: protectedProcedure
     // .output(Promise<UserSubscriptionPlan>)
     .query(async (opts) => {
+      noStore();
       const userId = opts.ctx.userId! as string;
       const custom = await db
         .selectFrom("Customer")
