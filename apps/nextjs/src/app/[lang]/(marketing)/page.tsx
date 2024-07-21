@@ -21,7 +21,7 @@ const meteors_data: Meteor = {
   description:
     "Join our Discord server to chat with other developers and get help.",
   button_content: "Chat with us",
-  url: "https://discord.com/invite/b9uTZjdkrb",
+  url: "https://discord.gg/8SwSX43wnD",
 };
 
 export default async function IndexPage({
