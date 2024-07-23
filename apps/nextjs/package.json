@@ -31,7 +31,7 @@
     "date-fns": "3.3.1",
     "framer-motion": "11.0.3",
     "negotiator": "0.6.3",
-    "next": "14.2.5",
+    "next": "15.0.0-rc.0",
     "next-themes": "0.2.1",
     "react": "18.3.1",
     "react-day-picker": "8.10.0",
