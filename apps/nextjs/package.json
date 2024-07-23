@@ -15,7 +15,7 @@
     "@dinero.js/currencies": "2.0.0-alpha.14",
     "@formatjs/intl-localematcher": "0.5.4",
     "@hookform/resolvers": "3.3.4",
-    "@next/mdx": "14.2.5",
+    "@next/mdx": "15.0.0-rc.0",
     "@saasfly/api": "workspace:*",
     "@saasfly/auth": "workspace:*",
     "@saasfly/db": "workspace:*",
