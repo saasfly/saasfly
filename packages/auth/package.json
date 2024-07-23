@@ -16,8 +16,8 @@
     "@t3-oss/env-nextjs": "0.8.0",
     "next": "15.0.0-rc.0",
     "next-auth": "4.24.7",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "zod": "3.22.4"
   },
   "devDependencies": {
