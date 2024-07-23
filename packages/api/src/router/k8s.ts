@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { TRPCError } from "@trpc/server";
 import { getServerSession } from "next-auth/next";
 import { z } from "zod";
@@ -19,6 +20,7 @@ const k8sClusterDeleteSchema = z.object({
 
 export const k8sRouter = createTRPCRouter({
   getClusters: protectedProcedure.query(async (opts) => {
+    noStore();
     const session = await getServerSession(authOptions);
     const userId = opts.ctx.userId! as string;
     if (!session) {

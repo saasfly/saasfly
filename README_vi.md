@@ -192,5 +192,5 @@ Dự án này lấy cảm hứng từ [Taxonomy](https://github.com/shadcn-ui/ta
 
 [check-workflow-badge-link]: https://github.com/saasfly/saasfly/actions/workflows/check.yml
 [github-license-badge-link]: https://github.com/saasfly/saasfly/blob/main/LICENSE
-[discord-badge-link]: https://discord.com/invite/b9uTZjdkrb
+[discord-badge-link]: https://discord.gg/8SwSX43wnD
 [made-by-nextify-badge-link]: https://nextify.ltd

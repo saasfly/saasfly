@@ -21,7 +21,7 @@ const meteors_data: Meteor = {
   description:
     "Join our Discord server to chat with other developers and get help.",
   button_content: "Chat with us",
-  url: "https://discord.com/invite/b9uTZjdkrb",
+  url: "https://discord.gg/8SwSX43wnD",
 };
 
 export default async function IndexPage({
@@ -35,10 +35,10 @@ export default async function IndexPage({
 
   return (
     <>
-      <section className="xl:h-[100vh] w-full px-8 sm:px-48 xl:px-48 md:px-48">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-10 md:pb-40">
+      <section className="w-full px-8 sm:px-48 md:px-48 xl:h-[100vh] xl:px-48">
+        <div className="grid grid-cols-1 gap-10 pb-10 md:pb-40 xl:grid-cols-2">
           <div className="flex flex-col items-start">
-            <div className="flex flex-col pt-4 lg:pt-28 xl:pt-28 md:pt-28">
+            <div className="flex flex-col pt-4 md:pt-28 lg:pt-28 xl:pt-28">
               <Link href="https://document.saasfly.io" target="_blank">
                 <DocumentGuide>
                   {dict.marketing.introducing || "Introducing Saasfly"}
@@ -60,9 +60,9 @@ export default async function IndexPage({
                 <TypewriterEffectSmooths />
               </div>
 
-              <div className="mt-6 flex sm:flex-row flex-col space-y-4 justify-center sm:space-y-0 sm:space-x-8 sm:justify-start mb-4 w-full">
+              <div className="mb-4 mt-6 flex w-full flex-col justify-center space-y-4 sm:flex-row sm:justify-start sm:space-x-8 sm:space-y-0">
                 <Link href={`${lang}/login`}>
-                  <ShimmerButton className="flex justify-center mx-auto">
+                  <ShimmerButton className="mx-auto flex justify-center">
                     <span className="z-10 w-48 whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent">
                       {dict.marketing.get_started}
                     </span>
@@ -81,7 +81,7 @@ export default async function IndexPage({
             </div>
           </div>
 
-          <div className="h-full w-full hidden xl:block">
+          <div className="hidden h-full w-full xl:block">
             <div className="flex flex-col pt-28">
               <Meteorss meteor={meteors_data} />
               <div className="mt-4 flex w-full justify-between">
@@ -95,7 +95,7 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="h-[100vh] w-full hidden xl:block">
+      <section className="hidden h-[100vh] w-full xl:block">
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
             <WobbleCardShow />
@@ -108,7 +108,7 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="h-[100vh] w-full hidden xl:block">
+      <section className="hidden h-[100vh] w-full xl:block">
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
             <div className="px-[120px]">
@@ -118,11 +118,11 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="w-full xl:hidden px-8">
+      <section className="w-full px-8 xl:hidden">
         <Questions />
       </section>
 
-      <section className="w-full px-8 pt-10 sm:px-0 xl:px-0 md:px-0 sm:pt-0 xl:pt-0 md:pt-0">
+      <section className="w-full px-8 pt-10 sm:px-0 sm:pt-0 md:px-0 md:pt-0 xl:px-0 xl:pt-0">
         <div className="flex h-full w-full flex-col items-center pb-[100px] pt-10">
           <div>
             <h1 className="mb-6 text-center text-3xl font-bold dark:text-zinc-100 md:text-5xl">
