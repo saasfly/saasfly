@@ -20,7 +20,6 @@ const k8sClusterDeleteSchema = z.object({
 
 export const k8sRouter = createTRPCRouter({
   getClusters: protectedProcedure.query(async (opts) => {
-    noStore();
     const session = await getServerSession(authOptions);
     const userId = opts.ctx.userId! as string;
     if (!session) {
