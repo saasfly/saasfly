@@ -37,6 +37,7 @@
     "zod-form-data": "2.0.2"
   },
   "devDependencies": {
+    "superjson": "",
     "@saasfly/eslint-config": "workspace:*",
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
