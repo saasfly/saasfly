@@ -1,6 +1,7 @@
 import { dinero, type Dinero, type DineroSnapshot } from "dinero.js";
 import superjson from "superjson";
-import type { JSONValue } from "superjson/dist/types";
+//@ts-ignore
+import { JSONValue } from "superjson/dist/types";
 
 superjson.registerCustom(
   {
