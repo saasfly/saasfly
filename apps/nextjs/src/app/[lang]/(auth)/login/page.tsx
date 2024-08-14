@@ -55,14 +55,14 @@ export default async function LoginPage({
           </p>
         </div>
         <UserAuthForm lang={lang} dict={dict.login} />
-        <p className="px-8 text-center text-sm text-muted-foreground">
+        {/* <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
             href={`/${lang}/register`}
             className="hover:text-brand underline underline-offset-4"
           >
             {dict.login.singup_title}
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );
