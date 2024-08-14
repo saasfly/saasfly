@@ -15,9 +15,7 @@
     "typecheck": "turbo typecheck",
     "postinstall": "bun run check-deps",
     "check-deps": "check-dependency-version-consistency .",
-    "gen": "turbo gen --config 'turbo/generators/config.ts'",
-    "compile-tw-config": "tsc --noEmitOnError tooling/tailwind-config/index.ts --outDir  ./",
-    "tailwind-config-viewer": " tailwind-config-viewer -c ./index.js -o -p 3333"
+    "gen": "turbo gen --config 'turbo/generators/config.ts'"
   },
   "devDependencies": {
     "@turbo/gen": "1.13.3",
