@@ -19,6 +19,7 @@ type Dictionary = Record<string, string>;
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   lang: string;
   dict: Dictionary;
+  disabled?: boolean;
 }
 
 const userAuthSchema = z.object({
@@ -31,6 +32,7 @@ export function UserAuthForm({
   className,
   lang,
   dict,
+  disabled,
   ...props
 }: UserAuthFormProps) {
   const {
@@ -86,7 +88,7 @@ export function UserAuthForm({
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
-              disabled={isLoading || isGitHubLoading}
+              disabled={isLoading || isGitHubLoading || disabled}
               {...register("email")}
             />
             {errors?.email && (
