@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { User } from "next-auth";
 
@@ -8,7 +9,6 @@ import { Button, buttonVariants } from "@saasfly/ui/button";
 
 import { LocaleChange } from "~/components/locale-change";
 import useScroll from "~/hooks/use-scroll";
-import { useSigninModal } from "~/hooks/use-signin-modal";
 import type { MainNavItem } from "~/types";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
@@ -38,8 +38,8 @@ export function NavBar({
   marketing,
   dropdown,
 }: NavBarProps) {
+  const router = useRouter();
   const scrolled = useScroll(50);
-  const signInModal = useSigninModal();
   return (
     <header
       className={`sticky top-0 z-40 flex w-full justify-center border-border bg-background/60 backdrop-blur-xl transition-all ${
@@ -76,7 +76,7 @@ export function NavBar({
               className="px-3"
               variant="default"
               size="sm"
-              onClick={signInModal.onOpen}
+              onClick={() => { router.push(`/${lang}/register`) }}
             >
               {typeof marketing.signup === "string"
                 ? marketing.signup
