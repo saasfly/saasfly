@@ -35,6 +35,26 @@ See more documentation at <https://document.saasfly.io>
 
 [![Star History Chart](https://api.star-history.com/svg?repos=saasfly/saasfly&type=Timeline)](https://star-history.com/#saasfly/saasfly&Timeline)
 
+## Sponsors
+
+<table>
+  <tr >
+    <td>
+      <a href="https://www.twillot.com/">
+        <picture>
+          <img alt="Take Control of All Your Twitter Assets" src="https://framerusercontent.com/assets/NSQelXGI3QhPe5cfwygkuw9Lnzc.png">
+        </picture>
+      </a>
+    </td>
+  <tr >
+    <td >
+      <a href="mailto:contact@nextify@ltd">
+        Add your logo here
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## 🚀 Getting Started
 
 ### 🖱 One Click Template
