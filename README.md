@@ -42,7 +42,7 @@ See more documentation at <https://document.saasfly.io>
     <td>
       <a href="https://www.twillot.com/">
         <picture>
-          <img alt="Take Control of All Your Twitter Assets" src="https://framerusercontent.com/assets/NSQelXGI3QhPe5cfwygkuw9Lnzc.png">
+          <img alt="Take Control of All Your Twitter Assets" src="/twillot.png">
         </picture>
       </a>
     </td>
