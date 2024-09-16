@@ -48,7 +48,7 @@ See more documentation at <https://document.saasfly.io>
     </td>
   <tr >
     <td >
-      <a href="mailto:contact@nextify@ltd">
+      <a href="mailto:contact@nextify.ltd">
         Add your logo here
       </a>
     </td>
