@@ -41,10 +41,12 @@ export const authOptions: NextAuthOptions = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   adapter: KyselyAdapter(db),
+
   providers: [
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
+      httpOptions: { timeout:15000 },
     }),
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
