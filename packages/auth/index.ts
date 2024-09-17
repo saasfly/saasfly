@@ -46,7 +46,7 @@ export const authOptions: NextAuthOptions = {
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
-      httpOptions: { timeout:15000 },
+      httpOptions: { timeout: 15000 },
     }),
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
