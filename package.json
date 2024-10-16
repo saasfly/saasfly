@@ -18,11 +18,11 @@
     "gen": "turbo gen --config 'turbo/generators/config.ts'"
   },
   "devDependencies": {
-    "@turbo/gen": "1.13.3",
+    "@turbo/gen": "2.1.3",
     "check-dependency-version-consistency": "4.1.0",
     "prettier": "3.2.5",
     "tailwind-config-viewer": "^2.0.4",
-    "turbo": "1.13.3",
+    "turbo": "2.1.3",
     "typescript": "5.4.5"
   },
   "engines": {
