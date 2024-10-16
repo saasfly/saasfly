@@ -3,6 +3,9 @@
   "globalDependencies": [
     "**/.env"
   ],
+  "globalEnv": [
+    "POSTGRES_URL"
+  ],
   "tasks": {
     "topo": {
       "dependsOn": [
