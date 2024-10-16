@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "contentlayer2 build && bun with-env next build",
+    "build": "contentlayer2 build && bun with-env next build --env-mode=loose",
     "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "bun with-env next dev",
     "lint": " bun with-env next lint --quiet",
