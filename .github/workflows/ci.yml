@@ -57,7 +57,16 @@ jobs:
           POSTGRES_PASSWORD: default
           POSTGRES_DB: verceldb
           POSTGRES_URL: postgres://default:default@localhost:5432/verceldb
-
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
+          NEXTAUTH_URL: http://localhost:3000
+          NEXTAUTH_SECRET: 1
+          AUTH_SECRET: 1
+          GITHUB_CLIENT_ID: 1
+          GITHUB_CLIENT_SECRET: 1
+          RESEND_API_KEY: 1
+          RESEND_FROM: 1
+          STRIPE_API_KEY: 1
+          STRIPE_WEBHOOK_SECRET: 1
 
       - name: lint and type-check
         run: bun run build lint format typecheck
