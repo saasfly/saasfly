@@ -9,6 +9,3 @@ src/components/user-account-nav.tsx
 src/lib/toc.ts
 src/middleware.ts
 contentlayer.config.ts
-src/app/[lang]/(docs)/docs/[[...slug]]/page.tsx
-src/app/[lang]/(marketing)/blog/[...slug]/page.tsx
-src/app/[lang]/(marketing)/blog/page.tsx
