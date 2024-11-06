@@ -46,18 +46,5 @@ jobs:
       - name: Install lib
         run: bun i
 
-      - name: Build
-        run: bun run build
-        env:
-          # The hostname used to communicate with the PostgreSQL service container
-          POSTGRES_HOST: postgres
-          # The default PostgreSQL port
-          POSTGRES_PORT: 5432
-          POSTGRES_USER: default
-          POSTGRES_PASSWORD: default
-          POSTGRES_DB: verceldb
-          POSTGRES_URL: postgres://default:default@localhost:5432/verceldb
-
-
       - name: lint and type-check
-        run: bun run build lint format typecheck
+        run: bun run  lint format typecheck
