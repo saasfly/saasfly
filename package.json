@@ -10,20 +10,12 @@
     "dev:web": "turbo dev --parallel --filter !@saasfly/stripe",
     "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
-    "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+    "lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache' && bunx manypkg check",
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' ",
     "typecheck": "turbo typecheck",
     "postinstall": "bun run check-deps",
     "check-deps": "check-dependency-version-consistency .",
     "gen": "turbo gen --config 'turbo/generators/config.ts'"
-  },
-  "devDependencies": {
-    "@turbo/gen": "^2.1.3",
-    "check-dependency-version-consistency": "4.1.0",
-    "prettier": "3.2.5",
-    "tailwind-config-viewer": "^2.0.4",
-    "turbo": "^2.1.3",
-    "typescript": "5.4.5"
   },
   "engines": {
     "node": ">=18"
@@ -34,5 +26,13 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@1.1.10"
+  "packageManager": "bun@1.1.10",
+  "dependencies": {
+    "@turbo/gen": "^2.1.3",
+    "check-dependency-version-consistency": "4.1.0",
+    "prettier": "3.2.5",
+    "tailwind-config-viewer": "^2.0.4",
+    "turbo": "^2.1.3",
+    "typescript": "5.4.5"
+  }
 }
