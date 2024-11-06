@@ -10,7 +10,7 @@
     "dev:web": "turbo dev --parallel --filter !stripe",
     "format": "turbo format --continue --ignore-path='../../.gitignore'",
     "format:fix": "turbo format --continue  --ignore-path='../../.gitignore'",
-    "lint": "turbo lint -- --quiet --cache --cache-location='node_modules/.cache/.eslintcache' --ignore-pattern='src/app/[lang]/(docs)/docs/[[...slug]]/page.tsx' --ignore-pattern='src/app/[lang]/(marketing)/blog/[...slug]/page.tsx' --ignore-pattern='src/app/[lang]/(marketing)/blog/page.tsx' && manypkg check",
+    "lint": "turbo lint -- --quiet --cache --cache-location='node_modules/.cache/.eslintcache' --ignore-pattern='src/app/[lang]/\\(docs\\)/docs/[[...slug]]/page.tsx' --ignore-pattern='src/app/[lang]/\\(marketing\\)/blog/[[...slug]]/page.tsx' --ignore-pattern='src/app/[lang]/\\(marketing\\)/blog/page.tsx' && manypkg check",
     "lint:fix": "turbo lint --continue -- --fix ",
     "typecheck": "turbo typecheck",
     "postinstall": "bun run check-deps",
