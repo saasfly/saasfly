@@ -132,9 +132,9 @@ bun run dev:web
 ## 🥺 Project Roadmap
 
 1. Admin Dashboard Page (in alpha !!!)
-   2. only provide static page now and we plan to integrate with headless arch
-   3. You can provide your admin account and change **ADMIN_EMAIL="admin@saasfly.io,root@saasfly.io"** in .env.local and access host:port/admin/dashboard
-   4. Based on security concerns, we will not provide online demos for the time being.
+    1. Only provide static page now and we plan to integrate with headless arch
+    2. You can provide your admin account and change **ADMIN_EMAIL="admin@saasfly.io,root@saasfly.io"** in .env.local and access host:port/admin/dashboard
+    3. Based on security concerns, we will not provide online demos for the time being.
 2. Consider integrating Payload CMS.
 
 ## ⭐ Features
