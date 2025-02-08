@@ -55,7 +55,10 @@ export const TypewriterEffectImpl = ({
               <motion.span
                 initial={{}}
                 key={`char-${index}`}
-                className={cn(`hidden text-neutral-500 opacity-0`, word.className)}
+                className={cn(
+                  `hidden text-neutral-500 opacity-0`,
+                  word.className,
+                )}
               >
                 {char}
               </motion.span>
