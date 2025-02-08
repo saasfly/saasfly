@@ -20,8 +20,8 @@
   },
   "marketing": {
     "introducing": "Introducing Saasfly",
-    "title": "Saasfly: A new SaaS player? Make things easier.",
-    "sub_title": "Your complete All-in-One solution for building SaaS services.",
+    "title": "Ship your apps to the world easier with ",
+    "sub_title": "An easy-to-use and enterprise-grade Next.js boilerplate. Your complete All-in-One solution for building SaaS services.",
     "get_started": "Get Started",
     "view_on_github": "View on GitHub",
     "explore_product": "Explore Product",
@@ -37,7 +37,44 @@
     "main_nav_documentation": "Documentation",
     "login": "Login",
     "signup": "Sign up",
-    "": ""
+    "": "",
+    "contributors": {
+      "contributors_desc": "contributors made Saasfly stronger",
+      "developers_first": "Help more than ",
+      "developers_second": " developers"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "Deploy on Vercel",
+      "deploy_on_vercel_desc": "Get started in seconds, see results instantly.",
+      "ship_on_cloudflare_title": "Ship on Cloudflare",
+      "ship_on_cloudflare_desc": "Grow your business with our Cloudflare-powered platform.",
+      "showcase_title": "Best Practice & Showcase",
+      "showcase_desc": "See what people are building and chat with them. And show off your apps to the world."
+    },
+    "features_grid": {
+      "monorepo_title": "Monorepo",
+      "monorepo_desc": "Manage multiple projects in a unified way to make code sharing easier and collaboration more efficient.",
+      "i18n_title": "i18n",
+      "i18n_desc": "Multilingual support made easy. Give your users a better experience and expand your business globally.",
+      "payments_title": "Global Payments",
+      "payments_desc": "Expand your business globally with our secure, convenient, and efficient payment platform.",
+      "nextauth_title": "NextAuth",
+      "nextauth_desc": "Empower your app with secure and seamless authentication, creating a frictionless login experience."
+    },
+    "sponsor": {
+      "title": "Loved by our Sponsors",
+      "donate": "Buy us a coffee, Your Brand here"
+    },
+    "video": {
+      "first_text": "Watch a Video, then",
+      "second_text1": "build your App in ",
+      "second_text2": "",
+      "time_text": "1 hour"
+    },
+    "people_comment": {
+      "title": "What People Are Saying",
+      "desc": "Don’t just take our word for it. Here’s what real people are saying about Saasfly."
+    }
   },
   "login": {
     "back": "Back",

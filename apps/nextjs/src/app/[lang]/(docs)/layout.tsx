@@ -19,7 +19,6 @@ export default async function DocsLayout({
   children,
   params: { lang },
 }: DocsLayoutProps) {
-  // const dashboardConfig = await getDashboardConfig({ params: { lang } });
   const dict = await getDictionary(lang);
   const user = await getCurrentUser();
 

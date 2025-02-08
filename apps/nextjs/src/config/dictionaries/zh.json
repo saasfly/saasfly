@@ -20,9 +20,9 @@
   },
   "marketing": {
     "introducing": "介绍 Saasfly",
-    "title": "Saasfly：新的 SaaS 玩家？让事情变得更简单。",
-    "sub_title": "您构建 SaaS 服务的完整一体化解决方案。",
-    "get_started": "启 航",
+    "title": "更轻松地将您的应用推向全球，尽在 ",
+    "sub_title": "简单易上手，具备企业级品质的 Next.js 模板。打造 SaaS 服务的终极一体化解决方案，助力业务增长。",
+    "get_started": "快速开始",
     "view_on_github": "在 GitHub 上查看",
     "explore_product": "探索产品",
     "features": "特色",
@@ -37,7 +37,44 @@
     "main_nav_documentation": "文档",
     "login": "登录",
     "signup": "注册",
-    "": ""
+    "": "",
+    "contributors": {
+      "contributors_desc": "位贡献者使Saasfly更强大了",
+      "developers_first": "帮助了超过 ",
+      "developers_second": " 位开发者"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "部署到 Vercel",
+      "deploy_on_vercel_desc": "轻松上手，快速看到成果。",
+      "ship_on_cloudflare_title": "使用 Cloudflare 发布应用",
+      "ship_on_cloudflare_desc": "使用我们基于 Cloudflare 构建的平台，助力您的业务增长。",
+      "showcase_title": "最佳实践，与您分享",
+      "showcase_desc": "发现精彩应用，与开发者交流心得，向全球展示你的才华。"
+    },
+    "features_grid": {
+      "monorepo_title": "Monorepo",
+      "monorepo_desc": "将多个项目统一管理，让代码共享更轻松，协作更高效。支持微服务架构、多平台应用以及大型项目。",
+      "i18n_title": "多语言支持",
+      "i18n_desc": "轻松实现多语言支持，为用户提供母语般的亲切体验，助您拓展国际市场，提升品牌形象。",
+      "payments_title": "全球化支付",
+      "payments_desc": "为您提供安全、便捷、高效的支付解决方案。全球化支持，多种支付方式，灵活定制，让您的业务轻松拓展，畅通无阻。",
+      "nextauth_title": "NextAuth",
+      "nextauth_desc": "让你的应用拥有安全可靠的身份验证，为用户提供丝滑流畅的登录体验。支持社交登录、邮箱验证以及自定义认证。"
+    },
+    "sponsor": {
+      "title": "我们深受赞助商的喜爱",
+      "donate": "给我们买杯咖啡，您的品牌会出现在这里"
+    },
+    "video": {
+      "first_text": "观看视频，然后",
+      "second_text1": "在 ",
+      "second_text2": "构建你的应用程序",
+      "time_text": "1 小时内"
+    },
+    "people_comment": {
+      "title": "听听大家怎么说",
+      "desc": "不要只听我们说。以下是真实用户对 Saasfly 的评价。"
+    }
   },
   "login": {
     "back": "返回",

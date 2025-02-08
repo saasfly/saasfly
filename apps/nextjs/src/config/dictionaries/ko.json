@@ -20,8 +20,8 @@
   },
   "marketing": {
     "introducing": "Saasfly 소개",
-    "title": "Saasfly: 새로운 SaaS 플레이어? 일을 더 쉽게 만드세요.",
-    "sub_title": "SaaS 서비스 구축을 위한 완벽한 올인원 솔루션입니다.",
+    "title": "다국어 지원으로, 당신의 앱을 전 세계 사용자에게, ",
+    "sub_title": "이것 하나로 끝! 사용하기 쉽고 엔터프라이즈급 Next.js 보일러플레이트. SaaS 서비스 구축을 위한 완벽한 솔루션입니다.",
     "get_started": "시작하기",
     "view_on_github": "GitHub 에서 보기",
     "explore_product": "제품 탐색",
@@ -37,7 +37,44 @@
     "main_nav_blog": "블로그",
     "login": "로그인",
     "signup": "가입하기",
-    "": ""
+    "": "",
+    "contributors": {
+      "contributors_desc": "명의 기여자들이 Saasfly를 더 강하게 만들었습니다",
+      "developers_first": "",
+      "developers_second": " 명 이상의 개발자들의 성공을 돕습니다"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "Vercel을 통한 배포",
+      "deploy_on_vercel_desc": "간단하게 시작하고 빠르게 결과를 얻으세요.",
+      "ship_on_cloudflare_title": "Cloudflare에서 앱을 배포하세요",
+      "ship_on_cloudflare_desc": "저희 Cloudflare 기반 플랫폼은 귀사의 비즈니스 성장에 도움이 될 것입니다.",
+      "showcase_title": "최고의 실천, 함께 공유",
+      "showcase_desc": "다른 사람들이 무엇을 만들고 있는지 확인하고, 그들과 자유롭게 대화하세요. 그리고 당신의 멋진 앱을 전 세계에 자랑스럽게 보여주세요."
+    },
+    "features_grid": {
+      "monorepo_title": "Monorepo",
+      "monorepo_desc": "코드 공유와 효율적인 협업을 위해 여러 프로젝트를 통합 관리합니다. 마이크로서비스, 멀티 플랫폼, 대규모 프로젝트를 지원합니다.",
+      "i18n_title": "다중 언어 지원",
+      "i18n_desc": "쉽게 다국어 지원을 구현하여 사용자에게 모국어와 같은 친근한 경험을 제공하고 국제 시장을 확장하며 브랜드 이미지를 향상시킵니다.",
+      "payments_title": "글로벌 결제",
+      "payments_desc": "당신의 비즈니스를 위한 안전하고 편리한 맞춤형 결제 솔루션을 제공합니다. 글로벌 지원으로 전 세계 시장으로 진출하세요.",
+      "nextauth_title": "NextAuth",
+      "nextauth_desc": "안전하고 편리한 인증으로 앱을 강화하세요. 소셜 로그인, 이메일 인증, 맞춤 인증을 지원합니다."
+    },
+    "sponsor": {
+      "title": "스폰서 여러분의 사랑을 받고 있습니다",
+      "donate": "저희에게 커피 한 잔 사주세요, 당신의 브랜드는 바로 여기"
+    },
+    "video": {
+      "first_text": "비디오를 보고",
+      "second_text1": "",
+      "second_text2": " 안에 앱을 만드세요",
+      "time_text": "1 시간"
+    },
+    "people_comment": {
+      "title": "사람들의 반응을 살펴보세요",
+      "desc": "저희 말만 믿지 마세요. 실제 사용자들이 Saasfly에 대해 어떻게 말하는지 확인해 보세요."
+    }
   },
   "login": {
     "back": "뒤로",

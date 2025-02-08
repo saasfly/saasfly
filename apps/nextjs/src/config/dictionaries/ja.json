@@ -20,8 +20,8 @@
   },
   "marketing": {
     "introducing": "Saasfly の紹介",
-    "title": "Saasfly：新たなSaaSプレーヤー？ 新たなSaaSプレーヤー？もっと簡単に。",
-    "sub_title": "SaaSサービス構築のための完全なAll-in-Oneソリューションです。",
+    "title": "より簡単にあなたのアプリを世界へ、 ",
+    "sub_title": "使いやすさが魅力のエンタープライズグレードNext.jsボイラープレート。SaaSサービス構築を完全サポートするオールインワンソリューション。",
     "get_started": "始める",
     "view_on_github": "GitHub で見る",
     "explore_product": "製品を探す",
@@ -37,7 +37,44 @@
     "main_nav_documentation": "ドキュメンテーション",
     "login": "ログイン",
     "signup": "サインアップ",
-    "": ""
+    "": "",
+    "contributors": {
+      "contributors_desc": "人の貢献者がSaasflyをより強くした",
+      "developers_first": "",
+      "developers_second": " 人以上の開発者を支え、共に成長"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "Vercelによるデプロイ",
+      "deploy_on_vercel_desc": "数秒でスタート、すぐに結果を実感。",
+      "ship_on_cloudflare_title": "Cloudflareでアプリをデプロイしよう",
+      "ship_on_cloudflare_desc": "クラウドフレア基盤のプラットフォームを通じて、ビジネスを拡大しましょう。",
+      "showcase_title": "ベストプラクティス、皆様と共有",
+      "showcase_desc": "他の人が何を作っているか確認して、彼らと自由に話しましょう。そして、あなたの素晴らしいアプリを世界に堂々と見せつけましょう。"
+    },
+    "features_grid": {
+      "monorepo_title": "Monorepo",
+      "monorepo_desc": "複数のプロジェクトを一元管理することで、コード共有が簡単になり、コラボレーションが効率化されます。",
+      "i18n_title": "国際化",
+      "i18n_desc": "多言語対応はもう簡単。ネイティブ言語での体験を提供し、ビジネスをグローバルに展開しましょう。",
+      "payments_title": "国際決済",
+      "payments_desc": "安全・便利・効率的な決済プラットフォームで、グローバルビジネスの成長を加速させましょう。",
+      "nextauth_title": "NextAuth",
+      "nextauth_desc": "安全でシームレスな認証により、アプリの利便性を高め、ユーザーにストレスフリーなログイン体験を提供。"
+    },
+    "sponsor": {
+      "title": "スポンサーの皆様に愛されています",
+      "donate": "コーヒーブレイクのお供に、あなたのブランドを"
+    },
+    "video": {
+      "first_text": "動画を見て",
+      "second_text1": "",
+      "second_text2": "でアプリを作っちゃお",
+      "time_text": "1 時間"
+    },
+    "people_comment": {
+      "title": "ユーザーのリアルな声",
+      "desc": "私たちの言うことだけを信じないでください。Saasflyについての実際のユーザーの声をご覧ください。"
+    }
   },
   "login": {
     "back": "戻る",

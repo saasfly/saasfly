@@ -18,7 +18,6 @@ export function LocaleChange({ url }: { url: string }) {
   const router = useRouter();
 
   function onClick(locale: string) {
-    // console.log(url);
     router.push(`/${locale}/` + url);
   }
 
