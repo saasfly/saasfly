@@ -31,8 +31,8 @@ export function TypewriterEffectSmooths() {
     },
   ];
   return (
-    <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+    <div className="max-w-[42rem] leading-normal text-neutral-500 dark:text-neutral-400 sm:text-lg sm:leading-8">
       <TextGenerateEffect words={words} />
-    </p>
+    </div>
   );
 }
