@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "lint": "eslint",
+    "lint": "eslint .",
     "format": "prettier --write '**/*.{js,cjs,mjs,ts,tsx,md,json}'  --ignore-path .prettierignore",
     "typecheck": "tsc --noEmit"
   },

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "lint": "eslint ",
+    "lint": "eslint .",
     "format": "prettier --check '**/*.{ts,json}' ",
     "typecheck": "tsc --noEmit"
   },
