@@ -38,7 +38,7 @@ jobs:
 
       - name: Copy env
         shell: bash
-        run: cp .env.example .env.local
+        run: cp .env.example .env
 
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
