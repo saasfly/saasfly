@@ -11,8 +11,8 @@ interface SubscriptionPlanTranslation {
     yearly: number;
   };
   stripeIds: {
-    monthly: string | null;
-    yearly: string | null;
+    monthly: string | null | undefined;
+    yearly: string | null | undefined;
   };
 }
 

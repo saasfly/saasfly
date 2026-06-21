@@ -25,13 +25,19 @@ export const metadata = {
 };
 
 // export type ClusterType = RouterOutputs["k8s"]["getClusters"][number];
-export default async function DashboardPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function DashboardPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   //don't need to check auth here, because we have a global auth check in _app.tsx
   const user = await getCurrentUser();
   if (!user) {

@@ -17,15 +17,14 @@ async function getClusterForUser(clusterId: Cluster["id"], userId: User["id"]) {
 }
 
 interface EditorClusterProps {
-  params: {
+  params: Promise<{
     clusterId: number;
     lang: string;
-  };
+  }>;
 }
 
-export default async function EditorClusterPage({
-  params,
-}: EditorClusterProps) {
+export default async function EditorClusterPage(props: EditorClusterProps) {
+  const params = await props.params;
   const user = await getCurrentUser();
   if (!user) {
     redirect(authOptions?.pages?.signIn ?? "/login-clerk");

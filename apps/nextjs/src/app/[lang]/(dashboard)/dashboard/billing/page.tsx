@@ -22,13 +22,19 @@ interface Subscription {
   endsAt: Date | null;
 }
 
-export default async function BillingPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function BillingPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return (
     <DashboardShell

@@ -34,12 +34,12 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@v1.1.10",
+  "packageManager": "bun@1.1.10",
   "dependencies": {
     "@clerk/nextjs": "^6.39.5"
   },
   "overrides": {
-    "next": "14.2.35",
+    "next": "15.5.19",
     "@trpc/server": "^10.45.4",
     "kysely": "^0.28.17",
     "handlebars": "^4.7.9",

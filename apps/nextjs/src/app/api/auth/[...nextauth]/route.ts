@@ -2,7 +2,7 @@
 
 import NextAuth from "next-auth";
 
-import { authOptions } from "@saasfly/auth";
+import { authOptions } from "@saasfly/auth/nextauth";
 
 const handler = NextAuth(authOptions);
 

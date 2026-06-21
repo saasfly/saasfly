@@ -16,13 +16,19 @@ export const metadata: Metadata = {
   description: "Login to your account",
 };
 
-export default async function LoginPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function LoginPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">

@@ -18,9 +18,9 @@ import { env } from "~/env.mjs";
 import { absoluteUrl, formatDate } from "~/lib/utils";
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 function getPostFromParams(params: { slug?: string | string[] }) {
@@ -34,7 +34,8 @@ function getPostFromParams(params: { slug?: string | string[] }) {
   return post;
 }
 
-export function generateMetadata({ params }: PostPageProps): Metadata {
+export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
+  const params = await props.params;
   const post = getPostFromParams(params);
   if (!post) {
     return {};
@@ -76,13 +77,14 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
   };
 }
 
-export function generateStaticParams(): PostPageProps["params"][] {
+export function generateStaticParams(): Awaited<PostPageProps["params"]>[] {
   return allPosts.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }));
 }
 
-export default function PostPage({ params }: PostPageProps) {
+export default async function PostPage(props: PostPageProps) {
+  const params = await props.params;
   const post = getPostFromParams(params);
 
   if (!post) {

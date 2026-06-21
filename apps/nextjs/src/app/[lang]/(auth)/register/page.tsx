@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 
 import { cn } from "@saasfly/ui";
@@ -12,13 +13,19 @@ export const metadata = {
   description: "Create an account to get started.",
 };
 
-export default async function RegisterPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function RegisterPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
 
   return (
@@ -44,7 +51,9 @@ export default async function RegisterPage({
               Enter your email below to create your account
             </p>
           </div>
-          <UserAuthForm lang={lang} dict={dict.login} disabled={true} />
+          <Suspense fallback={<div className="h-20" />}>
+            <UserAuthForm lang={lang} dict={dict.login} disabled={true} />
+          </Suspense>
           <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <Link

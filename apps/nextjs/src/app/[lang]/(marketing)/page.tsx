@@ -57,13 +57,19 @@ const people = [
   },
 ];
 
-export default async function IndexPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function IndexPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
 
   return (

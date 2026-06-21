@@ -12,15 +12,22 @@ import { getDictionary } from "~/lib/get-dictionary";
 
 interface EditLayoutProps {
   children?: React.ReactNode;
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export default async function DashboardLayout({
-  children,
-  params: { lang },
-}: EditLayoutProps) {
+export default async function DashboardLayout(props: EditLayoutProps) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
+  const {
+    children
+  } = props;
+
   const user = await getCurrentUser();
   const dict = await getDictionary(lang);
 

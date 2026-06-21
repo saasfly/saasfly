@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,13 +16,19 @@ export const metadata: Metadata = {
   description: "Login to your account",
 };
 
-export default async function LoginPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function LoginPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
@@ -54,7 +60,9 @@ export default async function LoginPage({
             {dict.login.signin_title}
           </p>
         </div>
-        <UserAuthForm lang={lang} dict={dict.login} />
+        <Suspense fallback={<div className="h-20" />}>
+          <UserAuthForm lang={lang} dict={dict.login} />
+        </Suspense>
         {/* <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
             href={`/${lang}/register`}

@@ -42,8 +42,6 @@ export function isNoNeedProcess(request: NextRequest): boolean {
   return noNeedProcessRoute.some((route) => new RegExp(route).test(pathname));
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 export const middleware = clerkMiddleware(async (auth, req: NextRequest) => {
   if (isNoNeedProcess(req)) {
     return null;
@@ -70,8 +68,6 @@ export const middleware = clerkMiddleware(async (auth, req: NextRequest) => {
     );
   }
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   if (isPublicRoute(req)) {
     return null;
   }

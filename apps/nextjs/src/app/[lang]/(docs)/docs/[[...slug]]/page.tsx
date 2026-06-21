@@ -17,9 +17,9 @@ import { env } from "~/env.mjs";
 import { absoluteUrl } from "~/lib/utils";
 
 interface DocPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 function getDocFromParams(params: { slug: any }) {
@@ -32,7 +32,8 @@ function getDocFromParams(params: { slug: any }) {
   return doc;
 }
 
-export function generateMetadata({ params }: DocPageProps): Metadata {
+export async function generateMetadata(props: DocPageProps): Promise<Metadata> {
+  const params = await props.params;
   const doc = getDocFromParams(params);
 
   if (!doc) {
@@ -80,7 +81,8 @@ export function generateStaticParams(): {
   }));
 }
 
-export default async function DocPage({ params }: DocPageProps) {
+export default async function DocPage(props: DocPageProps) {
+  const params = await props.params;
   const doc = getDocFromParams(params);
 
   if (!doc) {

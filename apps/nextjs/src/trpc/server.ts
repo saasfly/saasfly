@@ -34,7 +34,7 @@ export const createTRPCContext = async (opts: {
 const createContext = cache(async () => {
   return createTRPCContext({
     headers: new Headers({
-      cookie: cookies().toString(),
+      cookie: (await cookies()).toString(),
       "x-trpc-source": "rsc",
     }),
     auth: await auth(),

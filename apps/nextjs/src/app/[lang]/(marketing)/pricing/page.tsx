@@ -10,13 +10,19 @@ export const metadata = {
   title: "Pricing",
 };
 
-export default async function PricingPage({
-  params: { lang },
-}: {
-  params: {
-    lang: Locale;
-  };
-}) {
+export default async function PricingPage(
+  props: {
+    params: Promise<{
+      lang: Locale;
+    }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const user = await getCurrentUser();
   const dict = await getDictionary(lang);
   let subscriptionPlan;

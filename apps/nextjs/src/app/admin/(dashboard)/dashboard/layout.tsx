@@ -8,19 +8,26 @@ import { getDictionary } from "~/lib/get-dictionary";
 
 interface DashboardLayoutProps {
   children?: React.ReactNode;
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default async function DashboardLayout({
-  children,
-  params: { lang },
-}: DashboardLayoutProps) {
+export default async function DashboardLayout(props: DashboardLayoutProps) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
+  const {
+    children
+  } = props;
+
   const user = await getCurrentUser();
   const dict = await getDictionary(lang);
   if (!user) {
